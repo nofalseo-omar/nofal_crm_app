@@ -19,6 +19,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
     this.backgroundColor,
     this.flex = 3,
     this.nameOfKeyOfStyle,
+    this.date,
   });
 
   final String? icon, title;
@@ -30,12 +31,13 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
   final TextStyle? textStyle;
   final int flex;
   final String? nameOfKeyOfStyle;
+  final String? date;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       bool isSmallScreen = constraints.maxWidth < 600;
-      bool isMediumScreen = constraints.maxWidth < 900;
+      bool isMediumScreen = true;
 
       return Container(
         padding: EdgeInsets.symmetric(
@@ -48,24 +50,28 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Row(
                 children: [
-                  CustomImageHandler(
-                    icon,
-                    width: 35,
-                    fit: BoxFit.cover,
-                    height: 35,
-                  ),
+                  if (icon != null)
+                    CustomImageHandler(
+                      icon,
+                      width: 35,
+                      fit: BoxFit.cover,
+                      height: 35,
+                    ),
                   8.horizontalSpace,
                   Text(
                     title ?? '',
                     style: context.f16700?.copyWith(
                       color: AppColors.blackColor,
                     ),
-                  )
+                  ),
+                  Spacer(),
+                  if (trillingWidget != null) trillingWidget!,
                 ],
               ),
             ),
@@ -98,12 +104,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                     }).toList(),
                   ),
                 ),
-                // Trailing widget
-                if (trillingWidget != null && !isMediumScreen)
-                  Padding(
-                    padding: EdgeInsets.only(left: 8.0),
-                    child: trillingWidget!,
-                  ),
+
                 // Show More Icon
                 if (showMore != null || showMoreWithDetails != null)
                   GestureDetector(
@@ -116,6 +117,14 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                   ),
               ],
             ),
+            if (date != null) 8.verticalSpace,
+            if (date != null)
+              Text(
+                date!,
+                style: context.f12500!.copyWith(
+                  color: AppColors.blackColor.withOpacity(0.5),
+                ),
+              ),
           ],
         ),
       );

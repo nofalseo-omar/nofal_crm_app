@@ -11,9 +11,10 @@ class DeveloperHomeDrawerWidget extends StatelessWidget {
   const DeveloperHomeDrawerWidget({super.key});
 
   @override
+
   Widget build(BuildContext context) {
     var currentWidth = Get.width;
-    return currentWidth > 1100
+    return true
         ? Expanded(
             child: SingleChildScrollView(
               child: Column(

@@ -1,5 +1,6 @@
 import 'package:nofal_crm_app/features/Media/media_home/view/screen/media_home_screen.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/content_home_projects.dart';
+import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_details_screen.dart';
 import 'package:nofal_crm_app/features/immediate_tasks_feature/screen/view/immediate_tasks_screen.dart';
 import 'package:nofal_crm_app/features/manager_seo_feature/screen/view/manager_seo_details.dart';
 import 'package:nofal_crm_app/features/manager_seo_feature/screen/view/manager_seo_screen.dart';
@@ -53,6 +54,11 @@ appPages() => [
           name: Routes.socialMediaStatus,
           // binding: ContentHomeScreen(),
           page: () => const SocialMediaStatusScreen(),
+          transition: Transition.fadeIn),
+      GetPage(
+          name: Routes.socialMediaStatusDetails,
+          // binding: ContentHomeScreen(),
+          page: () => const SocialMediaStatusDetailsScreen(),
           transition: Transition.fadeIn),
       GetPage(
           name: Routes.projectStatusScreen,
