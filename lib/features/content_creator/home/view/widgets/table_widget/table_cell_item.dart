@@ -18,12 +18,9 @@ class TableCellItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        bool isSmallScreen = constraints.maxWidth < 600;
-
         return SizedBox(
-          width: isSmallScreen
-              ? constraints.maxWidth * 0.4
-              : 150, // Responsive width
+          width: constraints.maxWidth * 0.3,
+          // Responsive width
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

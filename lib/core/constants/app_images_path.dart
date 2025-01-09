@@ -25,6 +25,7 @@ class AppImages {
   static const String sent = 'assets/svg/sent.svg';
   static const String grid = 'assets/svg/grid.svg';
   static const String menu = 'assets/svg/menu.svg';
+  static const String menu2 = 'assets/svg/menu_2.svg';
   static const String image = 'assets/images/image.png';
   static const String circle = 'assets/images/circle.png';
   static const String reload = 'assets/images/reload.png';
