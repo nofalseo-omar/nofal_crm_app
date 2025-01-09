@@ -49,7 +49,7 @@ class CrmFlutter extends StatelessWidget {
 
     Get.lazyPut(() => controller, fenix: true);
     return ScreenUtilInit(
-      designSize: const Size(1400, 852),
+      designSize: const Size(393, 852),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => GetMaterialApp(
