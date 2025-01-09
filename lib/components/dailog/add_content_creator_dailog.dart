@@ -120,7 +120,13 @@ class AddContentCreatorDialog extends StatelessWidget {
                                   hintText: 'اكتب العنوان الرئيسي هنا')
                             ])),
                         SizedBox(width: 8),
-                        Expanded(child: DropDownUserItemWidget()),
+                        Expanded(
+                            child: DropDownUserItemWidget(
+                          dropdownItems: [
+                            "hassan",
+                            "ahmed",
+                          ],
+                        )),
                       ],
                     ),
                     const SizedBox(height: 16),
@@ -150,7 +156,13 @@ class AddContentCreatorDialog extends StatelessWidget {
                           ],
                         )),
                         SizedBox(width: 8),
-                        Expanded(child: DropDownUserItemWidget()),
+                        Expanded(
+                            child: DropDownUserItemWidget(
+                          dropdownItems: [
+                            "hassan",
+                            "ahmed",
+                          ],
+                        )),
                       ],
                     ),
                     const SizedBox(height: 16),

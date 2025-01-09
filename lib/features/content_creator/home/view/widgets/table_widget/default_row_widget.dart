@@ -15,6 +15,7 @@ class DefaultRowWidget extends StatelessWidget {
     this.textStyle,
     this.backgroundColor,
     this.flex = 3,
+    this.isCenter = false,
     this.nameOfKeyOfStyle,
   });
 
@@ -26,6 +27,7 @@ class DefaultRowWidget extends StatelessWidget {
   final Color? backgroundColor;
   final TextStyle? textStyle;
   final int flex;
+  final bool isCenter;
   final String? nameOfKeyOfStyle;
 
   @override
@@ -39,7 +41,7 @@ class DefaultRowWidget extends StatelessWidget {
           horizontal: isSmallScreen ? 8 : 16,
           vertical: 8,
         ),
-        margin: EdgeInsets.all(isSmallScreen ? 4 : 8),
+        // margin: EdgeInsets.all(isSmallScreen ? 4 : 8),
         decoration: BoxDecoration(
           color: backgroundColor ?? AppColors.lightBlue.withOpacity(.1),
           borderRadius: BorderRadius.circular(10),
@@ -58,7 +60,8 @@ class DefaultRowWidget extends StatelessWidget {
             Expanded(
               flex: 6,
               child: Wrap(
-                alignment: WrapAlignment.start,
+                alignment:
+                    isCenter ? WrapAlignment.center : WrapAlignment.start,
                 spacing: isSmallScreen ? 8 : 16,
                 runSpacing: isSmallScreen ? 8 : 12,
                 children: tableItems.entries.map((entry) {

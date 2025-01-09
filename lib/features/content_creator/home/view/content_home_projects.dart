@@ -1,14 +1,20 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_app_widget.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/components/developer_drawer_widget.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
+import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
+import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/main_table.dart';
 import 'package:flutter/material.dart';
+import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/users_view_circles.dart';
+import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/status_widget.dart';
+import 'package:nofal_crm_app/routes/app_routes.dart';
 
 class ContentHomeScreen extends StatelessWidget {
   const ContentHomeScreen({super.key});
@@ -31,29 +37,117 @@ class ContentHomeScreen extends StatelessWidget {
         ],
       ),
       drawer: Drawer(),
-      body: Row(
-        children: [
-          AppDrawer(
-            selectedIndex: 1,
-          ),
-          Expanded(
-            child: Column(children: [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: CustomAppBarWidget(),
-              ),
-              Expanded(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(flex: 5, child: MainTable()),
-                    DeveloperHomeDrawerWidget()
-                  ],
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'الإحصائيات',
+              style: context.f20500,
+            ),
+
+            16.verticalSpace,
+            StatusWidget(),
+            20.verticalSpace,
+
+            Row(
+              children: [
+                Text(
+                  'المشاريع',
+                  style: context.f20500,
                 ),
+                Spacer(),
+                Text(
+                  'عرض المزيد',
+                  style: context.f15600!.copyWith(
+                    color: AppColors.darkPrimaryColor,
+                  ),
+                )
+              ],
+            ),
+            12.verticalSpace,
+
+            // default
+            SizedBox(
+              height: 200.h,
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) => SizedBox(
+                  width: Get.width * 0.9,
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.toNamed(Routes.socialMediaStatus);
+                    },
+                    child: DefaultRowWidgetWithTopImage(
+                      icon: AppImages.users,
+                      title: 'العملات الرقمية',
+                      tableItems: const {
+                        'تم الإنشاء في:': '١ مايو ٢٠٢٣',
+                        "عدد الصور": "٢٧ صورة",
+                        "عدد المقالات": "٢١ مقال",
+                      },
+                      date: "تاريخ الإنشاء: ١ مايو ٢٠٢٣",
+                      trillingWidget: const TableUsersCirclesItem(
+                          title: 'تمت المشاركة مع',
+                          users: [
+                            'https://i.pravatar.cc/300?img=1',
+                            'https://i.pravatar.cc/300?img=2',
+                            'https://i.pravatar.cc/300?img=3',
+                            'https://i.pravatar.cc/300?img=4'
+                          ]),
+                      showMore: () {},
+                    ),
+                  ),
+                ),
+                itemCount: 5,
               ),
-            ]),
-          ),
-        ],
+            ),
+            20.verticalSpace,
+            Text(
+              'المشاريع الأحدث',
+              style: context.f20500,
+            ),
+            12.verticalSpace,
+            // default
+            SizedBox(
+              height: 200.h,
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () {
+                    Get.toNamed(Routes.socialMediaStatus);
+                  },
+                  child: SizedBox(
+                    width: Get.width * 0.9,
+                    child: DefaultRowWidgetWithTopImage(
+                      icon: AppImages.users,
+                      title: 'العملات الرقمية',
+                      tableItems: const {
+                        'تم الإنشاء في:': '١ مايو ٢٠٢٣',
+                        "عدد الصور": "٢٧ صورة",
+                        "عدد المقالات": "٢١ مقال",
+                        // "عدد البوستات": "١٣ بوست",
+                      },
+                      trillingWidget: const TableUsersCirclesItem(
+                          title: 'تمت المشاركة مع',
+                          users: [
+                            'https://i.pravatar.cc/300?img=1',
+                            'https://i.pravatar.cc/300?img=2',
+                            'https://i.pravatar.cc/300?img=3',
+                            'https://i.pravatar.cc/300?img=4'
+                          ]),
+                      showMore: () {},
+                    ),
+                  ),
+                ),
+                itemCount: 5,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

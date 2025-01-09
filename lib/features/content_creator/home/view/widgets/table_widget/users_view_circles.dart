@@ -14,18 +14,22 @@ class TableUsersCirclesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title,
-            style: context.f16600?.copyWith(color: const Color(0xff545472))),
-        6.verticalSpace,
+        Text(
+          title,
+          style: context.f14700?.copyWith(
+            color: const Color(0xff545472),
+          ),
+        ),
         FacePile(
           images: [
             NetworkImage(image),
             NetworkImage(image),
             NetworkImage(image)
           ],
-          radius: 20,
-          space: 30,
+          radius: 15,
+          space: 20,
           child: CircleAvatar(
             backgroundColor: AppColors.blackColor,
             radius: 20,

@@ -1,6 +1,7 @@
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget.dart';
+import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/users_view_circles.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -44,32 +45,7 @@ class MainTable extends StatelessWidget {
                   ],
                 ),
               ),
-              ...List.generate(6, (i) {
-                return GestureDetector(
-                  onTap: () {
-                    Get.toNamed(Routes.socialMediaStatus);
-                  },
-                  child: DefaultRowWidget(
-                    icon: AppImages.users,
-                    title: 'العملات الرقمية',
-                    tableItems: const {
-                      'تم الإنشاء في:': '١ مايو ٢٠٢٣',
-                      "عدد الصور": "٢٧ صورة",
-                      "عدد المقالات": "٢١ مقال",
-                      "عدد البوستات": "١٣ بوست",
-                    },
-                    trillingWidget: const TableUsersCirclesItem(
-                        title: 'تمت المشاركة مع:',
-                        users: [
-                          'https://i.pravatar.cc/300?img=1',
-                          'https://i.pravatar.cc/300?img=2',
-                          'https://i.pravatar.cc/300?img=3',
-                          'https://i.pravatar.cc/300?img=4'
-                        ]),
-                    showMore: () {},
-                  ),
-                );
-              })
+            
             ],
           ),
         ),
