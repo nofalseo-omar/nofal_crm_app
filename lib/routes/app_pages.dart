@@ -49,7 +49,7 @@ appPages() => [
           transition: Transition.fadeIn),
       GetPage(
           name: Routes.addDesingerTask,
-          page: () =>  AddDesignerTask(),
+          page: () =>  const AddDesignerTask(),
           transition: Transition.fadeIn),
       GetPage(
           name: Routes.companyTaskScreen,

@@ -1,7 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
-import 'package:nofal_crm_app/components/image_gallery_widget.dart';
 import 'package:nofal_crm_app/components/textFields/custom_text_field.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';

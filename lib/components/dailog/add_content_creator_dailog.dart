@@ -1,4 +1,3 @@
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/components/textFields/custom_text_field.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';

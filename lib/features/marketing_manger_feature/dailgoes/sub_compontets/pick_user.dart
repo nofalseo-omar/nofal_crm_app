@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
-import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DropDownUserItemWidget extends StatefulWidget {
