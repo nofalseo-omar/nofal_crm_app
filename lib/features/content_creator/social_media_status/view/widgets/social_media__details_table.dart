@@ -28,7 +28,7 @@ class SocialMediaDetailsTable extends StatelessWidget {
                 },
                 child: DefaultRowWidgetWithTopImage(
                   // icon: AppImages.users,
-                  title: 'فيس بوك',
+                  title: 'مرحله الوعي',
                   tableItems: {
                     'عدد الصور': '٢٧ صورة',
                     "عدد الفيديوهات": "٢٧ صورة",
