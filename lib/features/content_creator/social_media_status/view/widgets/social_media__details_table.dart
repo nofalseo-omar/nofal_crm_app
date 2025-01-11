@@ -1,7 +1,4 @@
-import 'package:nofal_crm_app/core/constants/app_images_path.dart';
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +26,7 @@ class SocialMediaDetailsTable extends StatelessWidget {
                 child: DefaultRowWidgetWithTopImage(
                   // icon: AppImages.users,
                   title: 'مرحله الوعي',
-                  tableItems: {
+                  tableItems: const {
                     'عدد الصور': '٢٧ صورة',
                     "عدد الفيديوهات": "٢٧ صورة",
                     "موجه إلي": "فيس بوك - انستجرام"
@@ -41,7 +38,7 @@ class SocialMediaDetailsTable extends StatelessWidget {
                     ),
                     width: 32.sp,
                     height: 32.sp,
-                    child: Icon(
+                    child: const Icon(
                       Icons.more_horiz_outlined,
                     ),
                   ),

@@ -67,7 +67,7 @@ class AppValidationFunctions {
     }
 
     // Regular expression for a valid name (letters only)
-    final RegExp nameRegExp = RegExp(r'^[a-zA-Z ]{3,50}$');
+    final RegExp nameRegExp = RegExp(r'^[a-zA-Z 1-9]{3,50}$');
 
     if (!nameRegExp.hasMatch(fullName)) {
       return Get.locale!.languageCode == 'ar'
@@ -77,6 +77,7 @@ class AppValidationFunctions {
 
     return null;
   }
+
 }
 
 class NoSpaceInputFormatter extends TextInputFormatter {

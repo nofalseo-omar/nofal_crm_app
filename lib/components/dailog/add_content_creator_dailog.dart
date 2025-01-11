@@ -1,8 +1,8 @@
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
+import 'package:nofal_crm_app/components/textFields/custom_text_field.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/sub_compontets/pick_user.dart';
 
 import '../custom_border_container.dart';
 import '../developer_drawer_widget.dart';
@@ -103,24 +103,24 @@ class AddContentCreatorDialog extends StatelessWidget {
                                   ]))
                         ]),
                     const SizedBox(height: 45.0),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 'العنوان الرئيسي',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(
+                              const SizedBox(height: 8),
+                              TextFieldComponent(
                                   hintText: 'اكتب العنوان الرئيسي هنا')
                             ])),
-                        SizedBox(width: 8),
-                        Expanded(
+                        const SizedBox(width: 8),
+                        const Expanded(
                             child: DropDownUserItemWidget(
                           dropdownItems: [
                             "hassan",
@@ -130,33 +130,33 @@ class AddContentCreatorDialog extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const Column(
+                    Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Text('الوصف',
+                          const Text('الوصف',
                               style: TextStyle(fontWeight: FontWeight.bold),
                               textAlign: TextAlign.right),
-                          SizedBox(height: 8),
-                          CustomTextField(
-                              hintText: 'اكتب الوصف هنا', maxLines: 4)
+                          const SizedBox(height: 8),
+                          TextFieldComponent(
+                              hintText: 'اكتب الوصف هنا', maxlines: 4)
                         ]),
                     const SizedBox(height: 16),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text('التون فويس',
+                            const Text('التون فويس',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right),
-                            SizedBox(height: 8),
-                            CustomTextField(hintText: 'اكتب النوع هنا'),
+                            const SizedBox(height: 8),
+                            TextFieldComponent(hintText: 'اكتب النوع هنا'),
                           ],
                         )),
-                        SizedBox(width: 8),
-                        Expanded(
+                        const SizedBox(width: 8),
+                        const Expanded(
                             child: DropDownUserItemWidget(
                           dropdownItems: [
                             "hassan",
@@ -166,34 +166,34 @@ class AddContentCreatorDialog extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text(
+                            const Text(
                               'النص المستخدم بالصورة',
                               style: TextStyle(fontWeight: FontWeight.bold),
                               textAlign: TextAlign.right,
                             ),
-                            SizedBox(height: 8),
-                            CustomTextField(hintText: 'اكتب النوع هنا'),
+                            const SizedBox(height: 8),
+                            TextFieldComponent(hintText: 'اكتب النوع هنا'),
                           ],
                         )),
-                        SizedBox(width: 8),
+                        const SizedBox(width: 8),
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text(
+                            const Text(
                               'لينك',
                               style: TextStyle(fontWeight: FontWeight.bold),
                               textAlign: TextAlign.right,
                             ),
-                            SizedBox(height: 8),
-                            CustomTextField(hintText: 'ضع اللينك هنا'),
+                            const SizedBox(height: 8),
+                            TextFieldComponent(hintText: 'ضع اللينك هنا'),
                           ],
                         )),
                       ],
@@ -219,35 +219,6 @@ class AddContentCreatorDialog extends StatelessWidget {
                   ],
                 ))
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class CustomTextField extends StatelessWidget {
-  final String hintText;
-  final int? maxLines;
-
-  const CustomTextField({super.key, required this.hintText, this.maxLines});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.black12, width: 1),
-        borderRadius: BorderRadius.circular(6),
-      ),
-      child: TextField(
-        maxLines: maxLines ?? 1,
-        textAlign: TextAlign.right,
-        style: context.f18600!.copyWith(fontWeight: FontWeight.w700),
-        decoration: InputDecoration(
-          hintText: hintText,
-          hintStyle: context.f18600!.copyWith(
-              fontWeight: FontWeight.w500, color: AppColors.textLightGreyColor),
-          border: InputBorder.none,
         ),
       ),
     );

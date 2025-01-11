@@ -31,7 +31,7 @@ class TextFieldComponent extends StatefulWidget {
     this.hasShowPasswordIcon = false,
     this.textAlign = TextAlign.start,
     this.label,
-    required this.hint,
+    required this.hintText,
   }) {
     fillColor ?? const Color(0xffF8F8F8);
     textStyle ?? const TextStyle(color: AppColors.blackColor);
@@ -51,7 +51,7 @@ class TextFieldComponent extends StatefulWidget {
   late Color? fillColor;
   final bool hasShowPasswordIcon;
   final bool isReadOnly;
-  final String hint;
+  final String hintText;
   final int? maxlines, maxLength;
   final double? radius;
   final TextAlign textAlign;
@@ -171,7 +171,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
           prefixIcon: widget.prefixIcon,
           filled: widget.fillColor != null,
           fillColor: widget.fillColor,
-          hintText: widget.hint,
+          hintText: widget.hintText,
           hintStyle: widget.hintTextStyle ??
               const TextStyle(fontWeight: FontWeight.w300, fontSize: 15),
         ),

@@ -1,4 +1,3 @@
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/main.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +6,6 @@ import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key, required this.selectedIndex});
@@ -23,17 +21,17 @@ class AppDrawer extends StatelessWidget {
           children: [
             (Get.width > 1600)
                 ? Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(
                       children: [
-                        CustomImageHandler(
+                        const CustomImageHandler(
                           AppImages.darkLogo,
                           fit: BoxFit.contain,
                         ),
-                        Spacer(),
+                        const Spacer(),
                         (Get.width > 1900)
                             ? const CustomImageHandler(AppImages.menu)
-                            : SizedBox(
+                            : const SizedBox(
                                 width: 1,
                               ),
                       ],

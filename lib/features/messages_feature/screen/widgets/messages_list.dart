@@ -54,7 +54,7 @@ class MessagesList extends StatelessWidget {
             child: Column(
               children: [
                 TextFieldComponent(
-                  hint: 'ابحث',
+                  hintText: 'ابحث',
                   fillColor: AppColors.lightwhiteColor,
                   borderColor: AppColors.lightwhiteColor,
                   radius: 4.r,

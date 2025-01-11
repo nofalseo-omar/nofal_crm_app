@@ -1,7 +1,6 @@
 import 'package:nofal_crm_app/components/custom_border_container.dart';
 import 'package:nofal_crm_app/components/custom_button.dart';
 import 'package:nofal_crm_app/components/dailog/custom_dialog_with_two_buttom.dart';
-import 'package:nofal_crm_app/core/localization/app_strings.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/sales/company_task/view/widget/iteam_task_company.dart';

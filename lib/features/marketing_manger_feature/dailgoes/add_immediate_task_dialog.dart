@@ -1,12 +1,12 @@
+import 'package:flutter/services.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../../../components/dailog/add_content_creator_dailog.dart';
+import 'package:nofal_crm_app/core/utils/app_validation_functions.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/sub_compontets/pick_user.dart';
 import '../../../components/textFields/custom_text_field.dart';
 
 class AddImmediateTaskDailog extends StatefulWidget {
@@ -22,7 +22,17 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("مهمة جديدة"),
+        title: const Text("إنشاء مهمة فورية"),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const CustomImageHandler(
+              AppImages.menu2,
+              color: AppColors.blackColor,
+            ),
+            onPressed: () {},
+          )
+        ],
       ),
       body: Container(
           width: MediaQuery.sizeOf(context).width,
@@ -40,11 +50,16 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'الملفات المرفقة',
-                          style: TextStyle(
-                              fontSize: 18.0, fontWeight: FontWeight.bold),
-                        ),
+                        RichText(
+                            text: TextSpan(children: [
+                          TextSpan(
+                              text: 'الملفات المرفقة', style: context.f18600!),
+                          TextSpan(
+                            text: ' (5 صور بحد أقصي)',
+                            style: context.f16500!.copyWith(
+                                color: AppColors.textfieldHintTxtColor),
+                          ),
+                        ])),
                         const SizedBox(height: 16),
                         SizedBox(
                           width: MediaQuery.sizeOf(context).width,
@@ -71,7 +86,7 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                                               style: context.f18600!.copyWith(
                                                   color:
                                                       const Color(0xff4B5563))),
-                                          Text('التحميل',
+                                          Text(' التحميل ',
                                               style: context.f18600!.copyWith(
                                                   color:
                                                       AppColors.primaryColor)),
@@ -96,14 +111,32 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                             separatorBuilder: (context, index) =>
                                 const SizedBox(width: 8),
                             itemBuilder: (context, index) => index != 4
-                                ? ClipRRect(
-                                    borderRadius: BorderRadius.circular(12),
-                                    child: Image.asset(
-                                      AppImages.image,
-                                      width: 60,
-                                      height: 60,
-                                      fit: BoxFit.cover,
-                                    ),
+                                ? Stack(
+                                    fit: StackFit.passthrough,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(4.0),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                          child: Image.asset(
+                                            AppImages.image,
+                                            width: 70,
+                                            height: 70,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                      const Positioned(
+                                        top: -4,
+                                        left: -2,
+                                        child: Card(
+                                          color: AppColors.redColor,
+                                          child: Icon(Icons.close,
+                                              color: Colors.white, size: 20),
+                                        ),
+                                      )
+                                    ],
                                   )
                                 : Stack(
                                     children: [
@@ -138,8 +171,12 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                         const SizedBox(height: 16),
                         SizedBox(
                           width: MediaQuery.sizeOf(context).width,
-                          child: const InputTextFieldWidget2(
+                          child: InputTextFieldWidget2(
                               title: 'العنوان',
+                              validator: (d) {
+                                return AppValidationFunctions
+                                    .stringValidationFunction(d, 'العنوان');
+                              },
                               hintText: 'اكتب اسم العنوان هنا'),
                         ),
                         const Row(
@@ -154,9 +191,13 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                             )),
                           ],
                         ),
-                        const InputTextFieldWidget2(
+                        InputTextFieldWidget2(
                             maxLines: 5,
-                            title: 'الواصف',
+                            validator: (d) {
+                              return AppValidationFunctions
+                                  .stringValidationFunction(d, 'الوصف');
+                            },
+                            title: 'الوصف',
                             hintText: 'اكتب الوصف هنا'),
                         const SizedBox(height: 16),
                         const Row(
@@ -170,52 +211,62 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                               ],
                             )),
                             SizedBox(width: 8),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Text(
-                                        '   مدة المهمة',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold),
-                                        textAlign: TextAlign.right,
-                                      ),
-                                      Text(
-                                        '(بالساعة)',
-                                        style: TextStyle(
-                                            color: Color(0xff8A8A8A),
-                                            fontWeight: FontWeight.w600),
-                                        textAlign: TextAlign.right,
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(height: 8),
-                                  CustomTextField(
-                                      hintText: 'اكتب العنوان الرئيسي هنا')
-                                ],
-                              ),
-                            ),
                           ],
                         ),
                         const SizedBox(height: 32),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            const Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  '   مدة المهمة',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.right,
+                                ),
+                                Text(
+                                  ' (بالساعة) ',
+                                  style: TextStyle(
+                                      color: Color(0xff8A8A8A),
+                                      fontWeight: FontWeight.w600),
+                                  textAlign: TextAlign.right,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                            TextFieldComponent(
+                                keyboardType:
+                                    const TextInputType.numberWithOptions(),
+                                inputFormatters: [
+                                  FilteringTextInputFormatter.digitsOnly
+                                ],
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'الحقل مطلوب';
+                                  }
+                                  return null;
+                                },
+                                hintText: 'اكتب العنوان الرئيسي هنا')
+                          ],
+                        ),
                         Row(
                           children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 15.0, horizontal: 30),
-                                backgroundColor: Colors.lightBlue,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8.0)),
+                            Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 15.0, horizontal: 30),
+                                  backgroundColor: Colors.lightBlue,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8.0)),
+                                ),
+                                child: const Text('إنشاء',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 18.0)),
                               ),
-                              child: const Text('إنشاء',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 18.0)),
                             ),
                           ],
                         ),
@@ -232,10 +283,15 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
 
 class InputTextFieldWidget2 extends StatelessWidget {
   const InputTextFieldWidget2(
-      {super.key, this.title, this.maxLines, this.hintText});
+      {super.key,
+      this.title,
+      this.maxLines,
+      this.hintText,
+      required this.validator});
   final String? title;
   final String? hintText;
   final int? maxLines;
+  final String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -244,7 +300,8 @@ class InputTextFieldWidget2 extends StatelessWidget {
         Text(title ?? '', style: context.f18700),
         const SizedBox(height: 12),
         TextFieldComponent(
-          hint: hintText ?? '',
+          hintText: hintText ?? '',
+          validator: validator,
           maxlines: maxLines ?? 1,
           fillColor: AppColors.whiteColor,
           borderColor: const Color(0xffB0B0B0).withOpacity(.8),
@@ -255,59 +312,3 @@ class InputTextFieldWidget2 extends StatelessWidget {
   }
 }
 
-class DropDownUserItemWidget extends StatefulWidget {
-  const DropDownUserItemWidget(
-      {super.key, required this.dropdownItems, this.title = "موجه إلي"});
-  // late String selectedValue;
-  final List<String> dropdownItems;
-  final String title;
-
-  @override
-  State<DropDownUserItemWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<DropDownUserItemWidget> {
-  String? selectedValue;
-  // List<String> dropdownItems = ['hassan', 'ali', 'ahmed'];
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Text(
-          widget.title,
-          style: TextStyle(fontWeight: FontWeight.bold),
-          textAlign: TextAlign.right,
-        ),
-        const SizedBox(height: 12),
-        Container(
-          height: 60,
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black12, width: 1),
-            borderRadius: BorderRadius.circular(6),
-          ),
-          child: DropdownButtonHideUnderline(
-            child: DropdownButton<String>(
-              value: selectedValue ?? widget.dropdownItems[0],
-              items: widget.dropdownItems
-                  .map((item) => DropdownMenuItem<String>(
-                        value: item,
-                        child:
-                            Text(item, style: const TextStyle(fontSize: 16.0)),
-                      ))
-                  .toList(),
-              onChanged: (value) {
-                setState(() {
-                  selectedValue = value!;
-                });
-              },
-              icon: const CustomImageHandler(AppImages.arrowDown),
-              isExpanded: true,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}

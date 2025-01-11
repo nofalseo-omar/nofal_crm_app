@@ -1,4 +1,3 @@
-import 'package:nofal_crm_app/components/dailog/add_content_creator_dailog.dart';
 import 'package:nofal_crm_app/components/text_field_component.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -47,34 +46,34 @@ class CreateCampignDialog extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 45.0),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 'اسم الحملة',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(
+                              const SizedBox(height: 8),
+                              TextFieldComponent(
                                   hintText: 'اكتب عدد أعمال مرحلة الوعي')
                             ])),
-                        SizedBox(width: 8),
+                        const SizedBox(width: 8),
                         Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 'اسم المشروع',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(
+                              const SizedBox(height: 8),
+                              TextFieldComponent(
                                   hintText: 'اكتب عدد أعمال مرحلة الوعي')
                             ])),
                       ],
@@ -132,47 +131,47 @@ class CreateCampignDialog extends StatelessWidget {
                                 controller: TextEditingController(),
                                 hintTextStyle: const TextStyle(
                                     color: AppColors.blackColor),
-                                hint: '٢٤-٢-٢٠٢٤'),
+                                hintText: '٢٤-٢-٢٠٢٤'),
                           ],
                         )),
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(width: 8),
+                        const SizedBox(width: 8),
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text('اسم البوست',
+                            const Text('اسم البوست',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right),
-                            SizedBox(height: 8),
-                            CustomTextField(
+                            const SizedBox(height: 8),
+                            TextFieldComponent(
                                 hintText: 'اكتب عدد أعمال مرحلة الوعي')
                           ],
                         )),
-                        Expanded(child: SizedBox())
+                        const Expanded(child: SizedBox())
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                             child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text(
+                            const Text(
                               'الهدف',
                               style: TextStyle(fontWeight: FontWeight.bold),
                               textAlign: TextAlign.right,
                             ),
-                            SizedBox(height: 8),
-                            CustomTextField(
-                                maxLines: 5, hintText: 'آكتب الوصف هنا'),
+                            const SizedBox(height: 8),
+                            TextFieldComponent(
+                                maxlines: 5, hintText: 'آكتب الوصف هنا'),
                           ],
                         )),
                       ],

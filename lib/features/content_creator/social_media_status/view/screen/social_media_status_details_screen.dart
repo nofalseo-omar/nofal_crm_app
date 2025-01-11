@@ -12,7 +12,7 @@ class SocialMediaStatusDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      body: SocialMediaDetailsTable(),
+      body: const SocialMediaDetailsTable(),
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
         centerTitle: true,

@@ -265,7 +265,7 @@ class WritingRightSideWidget extends StatelessWidget {
                 title: Text('رفض', style: context.f18700),
               ),
               TextFieldComponent(
-                hint: 'اكتب ملاحظاتك هنا',
+                hintText: 'اكتب ملاحظاتك هنا',
                 maxlines: 4,
                 borderColor: const Color.fromRGBO(0, 0, 0, 0.15),
                 fillColor: AppColors.whiteColor,
@@ -310,7 +310,7 @@ class InputTextFieldWidget extends StatelessWidget {
         Text(title ?? '', style: context.f18700),
         const SizedBox(height: 12),
         TextFieldComponent(
-          hint: hintText ?? '',
+          hintText: hintText ?? '',
           withBorder: false,
           maxlines: maxLines ?? 1,
           isReadOnly: true,

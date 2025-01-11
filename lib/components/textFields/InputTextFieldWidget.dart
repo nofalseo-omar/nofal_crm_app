@@ -28,7 +28,7 @@ class InputTextFieldWidget extends StatelessWidget {
         if (title != null) Text(title ?? '', style: context.f18700),
         if (title != null) const SizedBox(height: 12),
         TextFieldComponent(
-          hint: hint ?? "",
+          hintText: hint ?? "",
           withBorder: true,
           suffixIcon: isDatePicker
               ? CustomImageHandler(
@@ -43,7 +43,7 @@ class InputTextFieldWidget extends StatelessWidget {
               showDatePicker(
                   context: context,
                   firstDate: DateTime.now(),
-                  lastDate: DateTime.now().add(Duration(days: 365)),
+                  lastDate: DateTime.now().add(const Duration(days: 365)),
                   initialDate: DateTime.now());
             }
           },

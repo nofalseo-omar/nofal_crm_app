@@ -1,10 +1,8 @@
 import 'package:nofal_crm_app/components/custom_button.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
-import 'package:nofal_crm_app/components/textFields/InputTextFieldWidget.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -51,11 +49,11 @@ class ClientExistsDialog extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(11.r),
-                  color: Color(0xffE8EFF5),
+                  color: const Color(0xffE8EFF5),
                 ),
                 width: 40.sp,
                 height: 40.sp,
-                child: Icon(Icons.close),
+                child: const Icon(Icons.close),
               ),
             ),
             Center(

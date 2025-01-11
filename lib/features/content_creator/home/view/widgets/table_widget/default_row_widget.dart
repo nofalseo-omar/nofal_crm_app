@@ -80,7 +80,7 @@ class DefaultRowWidget extends StatelessWidget {
             // Trailing widget
             if (trillingWidget != null && !isMediumScreen)
               Padding(
-                padding: EdgeInsets.only(left: 8.0),
+                padding: const EdgeInsets.only(left: 8.0),
                 child: trillingWidget!,
               ),
             // Show More Icon

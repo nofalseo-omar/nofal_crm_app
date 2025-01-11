@@ -23,7 +23,7 @@ class MessageTextField extends StatelessWidget {
           ),
           Expanded(
             child: TextFieldComponent(
-              hint: 'اكتب استفسارك هنا ....',
+              hintText: 'اكتب استفسارك هنا ....',
               radius: 14.r,
               fillColor: AppColors.lightwhiteColor,
               borderColor: AppColors.lightwhiteColor,

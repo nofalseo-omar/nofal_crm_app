@@ -6,8 +6,6 @@ import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_button.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/content_creator/home/view/content_home_projects.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
 
 class ViewTaskDialog extends StatelessWidget {
   const ViewTaskDialog({super.key});
@@ -31,9 +29,7 @@ class ViewTaskDialog extends StatelessWidget {
                   Expanded(
                     child: CustomButton(
                       text: 'عرض المهمة',
-                      onTap: () {
-                        Get.to(AddImmediateTaskDailog());
-                      },
+                      onTap: () {},
                     ),
                   ),
                   8.horizontalSpace,

@@ -30,7 +30,7 @@ class CustomAppBarWidget extends StatelessWidget {
               // Search Field - Always Visible
               Expanded(
                 child: TextFieldComponent(
-                  hint: 'ابحث',
+                  hintText: 'ابحث',
                   borderColor: const Color(0xffB0B0B0),
                   fillColor: AppColors.whiteColor,
                   prefixIcon:

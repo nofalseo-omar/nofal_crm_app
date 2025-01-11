@@ -162,7 +162,7 @@ class AddTaskForDesignerDialog extends StatelessWidget {
                               Text('العنوان الرئيسي', style: context.f18700),
                               const SizedBox(height: 12),
                               TextFieldComponent(
-                                hint: 'ابحث',
+                                hintText: 'ابحث',
                                 withBorder: false,
                                 fillColor: const Color(0xffF7F7F7),
                               ),
@@ -177,7 +177,7 @@ class AddTaskForDesignerDialog extends StatelessWidget {
                               Text('رقم البوست', style: context.f18700),
                               const SizedBox(height: 12),
                               TextFieldComponent(
-                                hint: 'ابحث',
+                                hintText: 'ابحث',
                                 withBorder: false,
                                 fillColor: const Color(0xffF7F7F7),
                               ),
@@ -193,7 +193,7 @@ class AddTaskForDesignerDialog extends StatelessWidget {
                         Text('الوصف', style: context.f18700),
                         const SizedBox(height: 12),
                         TextFieldComponent(
-                          hint: 'ابحث',
+                          hintText: 'ابحث',
                           withBorder: false,
                           maxlines: 4,
                           fillColor: const Color(0xffF7F7F7),

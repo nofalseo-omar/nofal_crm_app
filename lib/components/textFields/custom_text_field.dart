@@ -4,7 +4,6 @@ import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class TextFieldComponent extends StatefulWidget {
@@ -33,7 +32,7 @@ class TextFieldComponent extends StatefulWidget {
     this.textAlign = TextAlign.start,
     this.label,
     this.withBorder,
-    required this.hint,
+    required this.hintText,
   }) {
     fillColor ?? const Color(0xffF8F8F8);
     textStyle ?? const TextStyle(color: AppColors.blackColor);
@@ -53,7 +52,7 @@ class TextFieldComponent extends StatefulWidget {
   late Color? fillColor;
   final bool hasShowPasswordIcon;
   final bool isReadOnly;
-  final String hint;
+  final String hintText;
   final int? maxlines, maxLength;
   final double? radius;
   final TextAlign textAlign;
@@ -237,7 +236,7 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
             prefixIcon: widget.prefixIcon,
             filled: widget.fillColor != null,
             fillColor: widget.fillColor,
-            hintText: widget.hint,
+            hintText: widget.hintText,
             hintStyle: widget.hintTextStyle ??
                 const TextStyle(
                     fontWeight: FontWeight.w400,

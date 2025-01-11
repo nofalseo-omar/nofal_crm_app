@@ -3,7 +3,6 @@ import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:face_pile/face_pile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TableUsersCirclesItem extends StatelessWidget {
   const TableUsersCirclesItem(

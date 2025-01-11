@@ -2,7 +2,6 @@ import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/table_cell_item.dart';
 import 'package:flutter/material.dart';
-import 'package:nofal_crm_app/features/content_creator/social_media_status/view/widgets/social_media_table.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -70,7 +69,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                       color: AppColors.blackColor,
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   if (trillingWidget != null) trillingWidget!,
                 ],
               ),

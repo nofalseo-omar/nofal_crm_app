@@ -68,7 +68,7 @@ class ImagesRightSideWidget extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               TextFieldComponent(
-                hint: 'اكتب ملاحظاتك هنا',
+                hintText: 'اكتب ملاحظاتك هنا',
                 maxlines: 4,
                 borderColor: const Color.fromRGBO(0, 0, 0, 0.15),
                 fillColor: AppColors.whiteColor,

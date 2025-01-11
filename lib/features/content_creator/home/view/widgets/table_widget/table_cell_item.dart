@@ -1,7 +1,6 @@
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TableCellItem extends StatelessWidget {
   const TableCellItem({
@@ -34,7 +33,7 @@ class TableCellItem extends StatelessWidget {
                 maxLines: 1,
               ),
               if (subTitle != null) ...[
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   subTitle!,
                   style: context.f16600?.copyWith(color: AppColors.blackColor),

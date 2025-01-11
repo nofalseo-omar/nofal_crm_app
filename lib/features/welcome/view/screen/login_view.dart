@@ -68,7 +68,7 @@ class LoginView extends GetView<LoginController> {
                         6.verticalSpace,
                         TextFieldComponent(
                           // fillColor: AppColors.w,
-                          hint: AppStrings.email.tr,
+                          hintText: AppStrings.email.tr,
                           fillColor: AppColors.whiteColor,
 
                           keyboardType: TextInputType.emailAddress,
@@ -89,7 +89,7 @@ class LoginView extends GetView<LoginController> {
                           onSubmit: (s) async {
                             await controller.login();
                           },
-                          hint: AppStrings.password.tr,
+                          hintText: AppStrings.password.tr,
                           fillColor: AppColors.whiteColor,
                           controller: controller.passwordController,
                           validator:

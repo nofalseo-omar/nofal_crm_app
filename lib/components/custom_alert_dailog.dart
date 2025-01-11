@@ -20,7 +20,7 @@ customAlertDailog({
       actionsAlignment: MainAxisAlignment.center,
       content: withTxtFiled != null
           ? TextFieldComponent(
-              hint: AppStrings.typePassword.tr,
+              hintText: AppStrings.typePassword.tr,
               onChange: onchange,
               hasShowPasswordIcon: true,
             )

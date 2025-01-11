@@ -2,15 +2,10 @@
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:nofal_crm_app/components/custom_app_widget.dart';
-import 'package:nofal_crm_app/components/custom_image_handler.dart';
-import 'package:nofal_crm_app/components/developer_drawer_widget.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
-import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/main_table.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/users_view_circles.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/status_widget.dart';

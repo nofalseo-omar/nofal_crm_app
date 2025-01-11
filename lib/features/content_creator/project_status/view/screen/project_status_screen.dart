@@ -1,9 +1,9 @@
-import 'package:nofal_crm_app/components/custom_app_widget.dart';
-import 'package:nofal_crm_app/components/developer_drawer_widget.dart';
+import 'package:get/get.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
-import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
+import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/project_status/view/widget/project_status_table.dart';
 import 'package:flutter/material.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
 
 class ProjectStatusScreen extends StatelessWidget {
   const ProjectStatusScreen({super.key});
@@ -11,6 +11,15 @@ class ProjectStatusScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.to(const AddImmediateTaskDailog());
+        },
+        child: const Icon(
+          Icons.note_alt,
+          color: AppColors.primaryColor,
+        ),
+      ),
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -19,7 +28,7 @@ class ProjectStatusScreen extends StatelessWidget {
         ),
       ),
       // backgroundColor: Color.fromRGBO(0, 45, 13, 0.05),
-      body: ProjectStatusTable(),
+      body: const ProjectStatusTable(),
     );
   }
 }

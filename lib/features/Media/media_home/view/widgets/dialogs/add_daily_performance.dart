@@ -1,4 +1,3 @@
-import 'package:nofal_crm_app/components/dailog/add_content_creator_dailog.dart';
 import 'package:nofal_crm_app/components/text_field_component.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -47,67 +46,67 @@ class AddDailyPerformance extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 45.0),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 'عدد الإنفاق اليومي',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(
+                              const SizedBox(height: 8),
+                              TextFieldComponent(
                                   hintText: 'اكتب عدد أعمال مرحلة الوعي')
                             ])),
-                        SizedBox(width: 8),
+                        const SizedBox(width: 8),
                         Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 'التكلفة لكل نقرة',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(
+                              const SizedBox(height: 8),
+                              TextFieldComponent(
                                   hintText: 'اكتب عدد أعمال مرحلة الوعي')
                             ])),
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 'نسبة النقرات الي عدد المشاهدات (CTR)',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(
+                              const SizedBox(height: 8),
+                              TextFieldComponent(
                                   hintText: 'اكتب نسبة النقرات (CTR)')
                             ])),
-                        SizedBox(width: 8),
+                        const SizedBox(width: 8),
                         Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 ' عدد المشاهدات ',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(hintText: 'اكتب عدد المشاهدات')
+                              const SizedBox(height: 8),
+                              TextFieldComponent(hintText: 'اكتب عدد المشاهدات')
                             ])),
                       ],
                     ),
@@ -116,17 +115,17 @@ class AddDailyPerformance extends StatelessWidget {
                     ///
                     Row(
                       children: [
-                        const Expanded(
+                        Expanded(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                              Text(
+                              const Text(
                                 'العملاء الجدد',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                                 textAlign: TextAlign.right,
                               ),
-                              SizedBox(height: 8),
-                              CustomTextField(
+                              const SizedBox(height: 8),
+                              TextFieldComponent(
                                   hintText: 'اكتب عدد العملاء الجدد')
                             ])),
                         const SizedBox(width: 8),
@@ -153,7 +152,7 @@ class AddDailyPerformance extends StatelessWidget {
                                 controller: TextEditingController(),
                                 hintTextStyle: const TextStyle(
                                     color: AppColors.blackColor),
-                                hint: '٢٤-٢-٢٠٢٤'),
+                                hintText: '٢٤-٢-٢٠٢٤'),
                           ],
                         )),
                       ],
