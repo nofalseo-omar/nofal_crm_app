@@ -18,5 +18,6 @@ class Routes {
   static const String seoScreen = '/seoScreen';
   static const String immediateTasksScreen = '/immediateTasksScreen';
   static const String addContentTask = '/addContentTask';
+  static const String addDesingerTask = '/addDesingerTask';
   // static const String customerCompanyDetails = '/customerCompanyDetailsScreen';
 }

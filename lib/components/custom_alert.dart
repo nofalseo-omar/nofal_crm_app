@@ -1,39 +1,64 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_button.dart';
+import 'package:nofal_crm_app/core/utils/app_colors.dart';
 
-void showCustomAlert(BuildContext context) {
+void showCustomAlert(
+    {required String title,
+    required String message,
+    required String button1,
+    required String button2,
+    required Function onTap1,
+    required Function onTap2}) {
   showDialog(
-    context: context,
+    context: Get.context!,
     builder: (BuildContext context) {
       return AlertDialog(
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              'أضف اسم لهذا العنوان',
+            Text(
+              title,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              style:
+                  const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10.h),
-            const Text(
-              'GHJ+785550584846445, أم صلال، قطر',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14.0, color: Colors.grey),
-            ),
             const SizedBox(height: 20.0),
-            const TextField(
+            TextField(
+              readOnly: true,
+              minLines: 4,
+              maxLines: 10,
+              controller: TextEditingController(text: message),
               decoration: InputDecoration(
-                labelText: 'الشغل',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.r),
+                    borderSide: BorderSide(
+                        color: AppColors.bgGrey.withOpacity(.5), width: 0.4)),
               ),
             ),
             const SizedBox(height: 20.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CustomButton(text: 'إلغاء', onTap: () {}),
-                CustomButton(text: 'إضافة', onTap: () {}),
+                Expanded(
+                  child: CustomButton(
+                      text: button1,
+                      onTap: () {
+                        onTap1();
+                        Get.back();
+                      }),
+                ),
+                10.horizontalSpace,
+                Expanded(
+                  child: CustomButton(
+                      text: button2,
+                      onTap: () {
+                        onTap2();
+                        Get.back();
+                      }),
+                ),
               ],
             ),
           ],

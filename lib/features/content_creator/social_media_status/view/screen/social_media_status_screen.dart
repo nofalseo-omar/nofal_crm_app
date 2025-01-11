@@ -17,16 +17,31 @@ class SocialMediaStatusScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       body: const SocialMediaTable(),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: AppColors.primaryColor,
-        child: const Icon(
-          Icons.add,
-          color: AppColors.whiteColor,
-          size: 30,
-        ),
-        onPressed: () {
-          Get.toNamed(Routes.addContentTask);
-        },
+      floatingActionButton: Row(
+        children: [
+          FloatingActionButton(
+            backgroundColor: AppColors.primaryColor,
+            child: const Icon(
+              Icons.add,
+              color: AppColors.whiteColor,
+              size: 30,
+            ),
+            onPressed: () {
+              Get.toNamed(Routes.addContentTask);
+            },
+          ),
+          FloatingActionButton(
+            backgroundColor: AppColors.primaryColor,
+            child: const Icon(
+              Icons.add,
+              color: AppColors.whiteColor,
+              size: 30,
+            ),
+            onPressed: () {
+              Get.toNamed(Routes.addDesingerTask);
+            },
+          ),
+        ],
       ),
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
