@@ -16,6 +16,7 @@ class SocialMediaTable extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisSize: MainAxisSize.max,
+          
           children: [
             ...List.generate(6, (i) {
               return GestureDetector(

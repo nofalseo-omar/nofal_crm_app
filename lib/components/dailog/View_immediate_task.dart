@@ -1,11 +1,12 @@
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
+import 'package:nofal_crm_app/components/developer_drawer_widget.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../image_gallery_widget.dart';
 
 class ViewImmediateTaskDailog extends StatelessWidget {
@@ -204,7 +205,7 @@ class TaskDetailsWidget extends StatelessWidget {
               SizedBox(height: 16),
               BuildTimeUnit(unit: 'العنوان', value: '10 دقيقة'),
               SizedBox(height: 16),
-              BuildTimeUnit(unit: 'الوصف', value: '10 دقيقة', height: 100),
+              BuildTimeUnit(unit: 'الوصف', value: '10 دقيقة'),
               SizedBox(height: 16),
               BuildTimeUnit(unit: 'العنوان', value: '10 دقيقة'),
               SizedBox(height: 16),
@@ -374,64 +375,6 @@ class _TaskDetailsSentWidgetState extends State<TaskDetailsSentWidget> {
               )
             : const SizedBox.shrink(),
       ],
-    );
-  }
-}
-
-class BuildTimeUnit extends StatelessWidget {
-  const BuildTimeUnit({
-    super.key,
-    required this.unit,
-    required this.value,
-    this.backColor,
-    this.height,
-  });
-
-  final String unit;
-  final String value;
-  final Color? backColor;
-  final double? height;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(unit,
-            style: context.f18700!.copyWith(color: AppColors.blackColor)),
-        const SizedBox(height: 8),
-        Container(
-          width: double.infinity,
-          height: height ?? 60,
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
-          decoration: BoxDecoration(
-            color: backColor ?? const Color(0xffF7F7F7),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Text(
-            value,
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class ItemContainerWidget extends StatelessWidget {
-  const ItemContainerWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12.0),
-      ),
     );
   }
 }

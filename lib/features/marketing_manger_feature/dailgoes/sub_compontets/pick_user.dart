@@ -6,9 +6,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DropDownUserItemWidget extends StatefulWidget {
   const DropDownUserItemWidget(
-      {super.key, required this.dropdownItems, this.title = "موجه إلي"});
+      {super.key,
+      required this.dropdownItems,
+      this.title = "موجه إلي",
+      required this.images});
   // late String selectedValue;
   final List<String> dropdownItems;
+  final List<String>? images;
   final String title;
 
   @override
@@ -44,10 +48,12 @@ class _MyWidgetState extends State<DropDownUserItemWidget> {
                         value: item,
                         child: Row(
                           children: [
-                            const CircleAvatar(
-                              radius: 16,
-                              backgroundColor: AppColors.primaryColor,
-                            ),
+                            if (widget.images != null &&
+                                widget.images!.isNotEmpty)
+                              const CircleAvatar(
+                                  radius: 16,
+                                  child:
+                                      CustomImageHandler(AppImages.darkLogo)),
                             10.horizontalSpace,
                             Text(item, style: const TextStyle(fontSize: 16.0)),
                           ],

@@ -1,9 +1,13 @@
+import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
+import 'package:nofal_crm_app/components/dailog/add_content_creator_dailog.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/widgets/social_media_table.dart';
 import 'package:flutter/material.dart';
+import 'package:nofal_crm_app/routes/app_routes.dart';
 
 class SocialMediaStatusScreen extends StatelessWidget {
   const SocialMediaStatusScreen({super.key});
@@ -13,6 +17,17 @@ class SocialMediaStatusScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       body: const SocialMediaTable(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.primaryColor,
+        child: const Icon(
+          Icons.add,
+          color: AppColors.whiteColor,
+          size: 30,
+        ),
+        onPressed: () {
+          Get.toNamed(Routes.addContentTask);
+        },
+      ),
       appBar: AppBar(
         backgroundColor: AppColors.whiteColor,
         title: Text(

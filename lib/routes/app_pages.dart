@@ -1,3 +1,4 @@
+import 'package:nofal_crm_app/components/dailog/add_content_creator_dailog.dart';
 import 'package:nofal_crm_app/features/Media/media_home/view/screen/media_home_screen.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/content_home_projects.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_details_screen.dart';
@@ -38,12 +39,17 @@ appPages() => [
       ),
       GetPage(
           name: Routes.homeContent,
-          // binding: ContentHomeScreen(),
+        
           page: () => const ContentHomeScreen(),
           transition: Transition.fadeIn),
       GetPage(
+          name: Routes.addContentTask,
+        
+          page: () => const AddContentCreatorDialog(),
+          transition: Transition.fadeIn),
+      GetPage(
           name: Routes.companyTaskScreen,
-          // binding: ContentHomeScreen(),
+         
           page: () => const CompanyTaskScreen(),
           transition: Transition.fadeIn),
       GetPage(
@@ -52,80 +58,79 @@ appPages() => [
       ),
       GetPage(
           name: Routes.socialMediaStatus,
-          // binding: ContentHomeScreen(),
+      
           page: () => const SocialMediaStatusScreen(),
           transition: Transition.fadeIn),
       GetPage(
           name: Routes.socialMediaStatusDetails,
-          // binding: ContentHomeScreen(),
+        
           page: () => const SocialMediaStatusDetailsScreen(),
           transition: Transition.fadeIn),
       GetPage(
           name: Routes.projectStatusScreen,
-          // binding: ContentHomeScreen(),
+      
           page: () => const ProjectStatusScreen(),
           transition: Transition.fadeIn),
-      // name: Routes.socialMediaStatus,
-      // binding: ContentHomeScreen(),
+
 
       GetPage(
         name: Routes.marketingMangerScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const MarketingMangerScreen(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.customerCompanyDetails,
-        // binding: ContentHomeScreen(),
+       
         page: () => const CustomerCompanyScreen(),
         transition: Transition.fadeIn,
       ),
 
       GetPage(
         name: Routes.campaignDetails,
-        // binding: ContentHomeScreen(),
+       
         page: () => const CampaignDetails(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.managerSeoDetailsScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const ManagerSeoDetails(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.notificationsScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const NotificationScreen(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.seoScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const SeoScreen(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.mediaHomeScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const MediaHomeScreen(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.managerSeoScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const ManagerSeoScreen(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.managerSeoDetailsScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const ManagerSeoDetails(),
         transition: Transition.fadeIn,
       ),
       GetPage(
         name: Routes.immediateTasksScreen,
-        // binding: ContentHomeScreen(),
+       
         page: () => const ImmediateTasksScreen(),
         transition: Transition.fadeIn,
       ),

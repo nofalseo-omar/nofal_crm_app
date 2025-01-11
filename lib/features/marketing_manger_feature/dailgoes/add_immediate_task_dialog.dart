@@ -184,6 +184,7 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                           children: [
                             Expanded(
                                 child: DropDownUserItemWidget(
+                                       images: [],
                               dropdownItems: [
                                 "hassan",
                                 "ahmed",
@@ -205,6 +206,7 @@ class _AddImmediateTaskDailogState extends State<AddImmediateTaskDailog> {
                           children: [
                             Expanded(
                                 child: DropDownUserItemWidget(
+                                       images: [],
                               dropdownItems: [
                                 "hassan",
                                 "ahmed",

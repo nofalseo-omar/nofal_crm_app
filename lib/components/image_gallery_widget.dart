@@ -10,70 +10,72 @@ class ImageGalleryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'الملفات المرفقة',
-          style: context.f18600!.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        const SizedBox(height: 8),
-        Row(
-          children: [
-            const CustomImageHandler(
-              AppImages.image,
-              height: 160,
-              width: 390,
-              fit: BoxFit.fill,
+    return FittedBox(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'الملفات المرفقة',
+            style: context.f18600!.copyWith(
+              fontWeight: FontWeight.bold,
             ),
-            const SizedBox(width: 8),
-            Column(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: const CustomImageHandler(
-                    AppImages.image,
-                    height: 76,
-                    width: 85,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Stack(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: const CustomImageHandler(
-                        AppImages.image,
-                        height: 76,
-                        width: 85,
-                        fit: BoxFit.fill,
-                      ),
+          ),
+          const SizedBox(height: 8),
+          Row(
+            children: [
+              const CustomImageHandler(
+                AppImages.image,
+                height: 160,
+                // width: 390,
+                fit: BoxFit.fill,
+              ),
+              const SizedBox(width: 8),
+              Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: const CustomImageHandler(
+                      AppImages.image,
+                      height: 76,
+                      width: 85,
+                      fit: BoxFit.cover,
                     ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: Container(
-                        color: AppColors.grey.withOpacity(.8),
-                        height: 76,
-                        width: 85,
-                        alignment: Alignment.center,
-                        child: Text(
-                          '2+',
-                          textAlign: TextAlign.center,
-                          style: context.f14700!
-                              .copyWith(color: AppColors.whiteColor),
+                  ),
+                  const SizedBox(height: 8),
+                  Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: const CustomImageHandler(
+                          AppImages.image,
+                          height: 76,
+                          width: 85,
+                          fit: BoxFit.fill,
                         ),
                       ),
-                    )
-                  ],
-                ),
-              ],
-            )
-          ],
-        )
-      ],
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                          color: AppColors.grey.withOpacity(.8),
+                          height: 76,
+                          width: 85,
+                          alignment: Alignment.center,
+                          child: Text(
+                            '2+',
+                            textAlign: TextAlign.center,
+                            style: context.f14700!
+                                .copyWith(color: AppColors.whiteColor),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
