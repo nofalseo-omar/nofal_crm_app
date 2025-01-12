@@ -6,30 +6,31 @@ import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widge
 class ConnectionDurationWidget extends StatelessWidget {
   const ConnectionDurationWidget({
     super.key,
+    this.title,
   });
-
+  final String? title;
   @override
   Widget build(BuildContext context) {
     return CustomBorderContainer(
       containerColor: AppColors.primaryColor.withOpacity(0.1),
-      child: const Column(
+      child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Icon(
+                const Icon(
                   Icons.circle,
                   color: Colors.green,
                   size: 14,
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Text(
-                  ' مدة المهمة حتي الان',
-                  style: TextStyle(
+                  title ?? ' مدة المهمة حتي الان',
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -38,9 +39,9 @@ class ConnectionDurationWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           // Divider(color: Colors.grey, thickness: 0.5),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
