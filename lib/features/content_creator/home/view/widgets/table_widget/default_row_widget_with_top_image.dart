@@ -63,14 +63,42 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                       height: 35,
                     ),
                   8.horizontalSpace,
-                  Text(
-                    title ?? '',
-                    style: context.f16700?.copyWith(
-                      color: AppColors.blackColor,
+                  Expanded(
+                    flex: 5,
+                    child: Text(
+                      title! ?? '',
+                      overflow: TextOverflow.ellipsis,
+                      style: context.f16700?.copyWith(
+                        color: AppColors.blackColor,
+                      ),
                     ),
                   ),
-                  const Spacer(),
-                  if (trillingWidget != null) trillingWidget!,
+                  const Spacer(
+                    flex: 1,
+                  ),
+                  if (trillingWidget != null)
+                    FittedBox(
+                      child: Row(
+                        children: [
+                          trillingWidget!,
+                          10.horizontalSpace,
+                          if (showMore != null || showMoreWithDetails != null)
+                            GestureDetector(
+                              onTapDown: (details) =>
+                                  showMoreWithDetails?.call(details),
+                              child: const Card(
+                                elevation: 0,
+                                color: Color(0xffFAFEFF),
+                                child: Icon(
+                                  Icons.more_horiz,
+                                  color: Color(0xff91969A),
+                                  size: 30,
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
                 ],
               ),
             ),
@@ -85,7 +113,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
 
                 // Table Items - dynamically sized
                 Expanded(
-                  flex: 4,
+                  flex: 5,
                   child: Wrap(
                     alignment: WrapAlignment.start,
                     spacing: isSmallScreen ? 8 : 16,
@@ -105,24 +133,31 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                 ),
 
                 // Show More Icon
-                if (showMore != null || showMoreWithDetails != null)
-                  GestureDetector(
-                    onTapDown: (details) => showMoreWithDetails?.call(details),
-                    child: const Icon(
-                      Icons.more_horiz,
-                      color: Color(0xff91969A),
-                      size: 30,
-                    ),
-                  ),
+                // if (showMore != null || showMoreWithDetails != null)
+                //   GestureDetector(
+                //     onTapDown: (details) => showMoreWithDetails?.call(details),
+                //     child: const Icon(
+                //       Icons.more_horiz,
+                //       color: Color(0xff91969A),
+                //       size: 30,
+                //     ),
+                //   ),
               ],
             ),
-            if (date != null) 8.verticalSpace,
+            if (date != null)
+              const Spacer(
+                flex: 3,
+              ),
             if (date != null)
               Text(
                 date!,
                 style: context.f12500!.copyWith(
                   color: AppColors.blackColor.withOpacity(0.5),
                 ),
+              ),
+            if (date != null)
+              const Spacer(
+                flex: 1,
               ),
           ],
         ),

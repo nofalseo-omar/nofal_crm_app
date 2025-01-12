@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_button.dart';
+import 'package:nofal_crm_app/components/custom_image_handler.dart';
+import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/table_cell_item.dart';
@@ -50,12 +52,15 @@ class ProjectStatusWidget extends StatelessWidget {
                   child: SizedBox(
                     width: double.infinity,
                     height: 90.h,
-                    child: Placeholder(),
+                    child: CustomImageHandler(
+                      fit: BoxFit.fill,
+                      AppImages.image,
+                    ),
                   ),
                 ),
                 8.verticalSpace,
                 Text(
-                  "نحن هنا لمساعدتك ،تواصل ،تواصل ،تواصل ",
+                  "نحن هنا لمساعدتك ،تواصل   ",
                   style: context.f16600,
                 ),
                 16.verticalSpace,
@@ -63,20 +68,20 @@ class ProjectStatusWidget extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TableCellItem(
-                        title: "عدد الصور",
-                        subTitle: "٢٧ صورة",
+                        title: "الدسكربشن",
+                        subTitle: "موجود ",
                       ),
                     ),
                     Expanded(
                       child: TableCellItem(
-                        title: "عدد المقالات",
-                        subTitle: "٢١ مقال",
+                        title: "التون فويس",
+                        subTitle: "ترفيهي",
                       ),
                     ),
                     Expanded(
                       child: TableCellItem(
-                        title: "عدد البوستات",
-                        subTitle: "١٣ بوست",
+                        title: "سوشيال ميديا",
+                        subTitle: "فيس بوك",
                       ),
                     ),
                   ],

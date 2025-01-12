@@ -29,7 +29,9 @@ class ViewTaskDialog extends StatelessWidget {
                   Expanded(
                     child: CustomButton(
                       text: 'عرض المهمة',
-                      onTap: () {},
+                      onTap: () {
+                        Get.back();
+                      },
                     ),
                   ),
                   8.horizontalSpace,

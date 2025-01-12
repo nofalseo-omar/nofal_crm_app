@@ -16,6 +16,7 @@ class SocialMediaStatusScreen extends StatelessWidget {
       backgroundColor: AppColors.whiteColor,
       body: const SocialMediaTable(),
       floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
             backgroundColor: AppColors.primaryColor,
@@ -27,6 +28,9 @@ class SocialMediaStatusScreen extends StatelessWidget {
             onPressed: () {
               Get.toNamed(Routes.addContentTask);
             },
+          ),
+          const SizedBox(
+            width: 10,
           ),
           FloatingActionButton(
             backgroundColor: AppColors.primaryColor,
@@ -41,23 +45,7 @@ class SocialMediaStatusScreen extends StatelessWidget {
           ),
         ],
       ),
-      appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
-        title: Text(
-          'ايفولا',
-          style: context.f20600,
-        ),
-        automaticallyImplyLeading: true,
-        actions: [
-          IconButton(
-            icon: const CustomImageHandler(
-              AppImages.menu2,
-              color: AppColors.blackColor,
-            ),
-            onPressed: () {},
-          )
-        ],
-      ),
+      appBar: buildAppBar(context, 'ايفولا'),
       //  Row(
       //   children: [
       //     AppDrawer(
@@ -86,4 +74,31 @@ class SocialMediaStatusScreen extends StatelessWidget {
       // )
     );
   }
+}
+
+AppBar buildAppBar(BuildContext context, title) {
+  return AppBar(
+    backgroundColor: AppColors.whiteColor,
+    centerTitle: true,
+    title: Text(
+      title,
+      style: context.f20600,
+    ),
+    automaticallyImplyLeading: false,
+    leading: IconButton(
+      icon: const CustomImageHandler(
+        AppImages.menu2,
+        color: AppColors.blackColor,
+      ),
+      onPressed: () {},
+    ),
+    actions: [
+      IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: const RotatedBox(
+              quarterTurns: 2, child: CustomImageHandler(AppImages.arrowBack)))
+    ],
+  );
 }

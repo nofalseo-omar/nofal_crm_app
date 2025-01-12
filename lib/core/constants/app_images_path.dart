@@ -10,6 +10,7 @@ class AppImages {
   static const String taskCompany = 'assets/svg/taskcomapny.svg';
   static const String hide = 'assets/svg/eye-disable.svg';
   static const String edit = 'assets/svg/edit-rectangle.svg';
+  static const String search = 'assets/svg/search.svg';
 
   static const String delete = 'assets/svg/trash.svg';
 

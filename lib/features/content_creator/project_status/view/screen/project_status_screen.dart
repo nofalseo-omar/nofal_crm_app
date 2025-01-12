@@ -4,6 +4,7 @@ import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/project_status/logic/controller/project_status_controller.dart';
 import 'package:nofal_crm_app/features/content_creator/project_status/view/widget/project_status_table.dart';
 import 'package:flutter/material.dart';
+import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
 import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
 
 class ProjectStatusScreen extends GetView<ProjectStautsController> {
@@ -12,27 +13,16 @@ class ProjectStatusScreen extends GetView<ProjectStautsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Row(
-        children: [
-          FloatingActionButton(
-            onPressed: () {
-              Get.to(const AddImmediateTaskDailog());
-            },
-            child: const Icon(
-              Icons.note_alt,
-              color: AppColors.primaryColor,
-            ),
-          ),
-          
-        ],
-      ),
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'مرحلة الوعي',
-          style: context.f20500,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.to(const AddImmediateTaskDailog());
+        },
+        child: const Icon(
+          Icons.note_alt,
+          color: AppColors.primaryColor,
         ),
       ),
+      appBar: buildAppBar(context, 'مرحلة الوعي'),
       // backgroundColor: Color.fromRGBO(0, 45, 13, 0.05),
       body: const ProjectStatusTable(),
     );

@@ -14,12 +14,12 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: (Get.width > 1600) ? Get.width * 0.12 : 80,
+      // width: Get.width * 0.5,
       child: CustomBorderContainer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            (Get.width > 1600)
+            (true)
                 ? Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(

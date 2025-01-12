@@ -16,7 +16,6 @@ class SocialMediaTable extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisSize: MainAxisSize.max,
-          
           children: [
             ...List.generate(6, (i) {
               return GestureDetector(
@@ -27,9 +26,9 @@ class SocialMediaTable extends StatelessWidget {
                   icon: AppImages.users,
                   title: 'فيس بوك',
                   tableItems: {
-                    'عدد البوستات': '١٣ بوست',
-                    "عدد الفيديوهات": "٢٧ صورة",
-                    "عدد المقالات": "٢١ مقال"
+                    'عدد الصور': '١٣ صورة',
+                    "عدد المقالات": "٢١ مقال",
+                    "عدد البوستات": "٢٧ بوست",
                   },
                   // date: "تاريخ الإنشاء: ١ مايو ٢٠٢٣",
                 ),
