@@ -17,7 +17,6 @@ class SeoScreen extends StatelessWidget {
         child: Row(
           children: [
             const AppDrawer(
-              selectedIndex: 0,
             ),
             8.horizontalSpace,
             Expanded(

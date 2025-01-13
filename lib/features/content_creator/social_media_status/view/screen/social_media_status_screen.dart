@@ -3,6 +3,7 @@ import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
+import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/widgets/social_media_table.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
@@ -14,35 +15,36 @@ class SocialMediaStatusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
+      drawer: AppDrawer( ),
       body: const SocialMediaTable(),
-      floatingActionButton: Row(
+      floatingActionButton: const Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FloatingActionButton(
-            backgroundColor: AppColors.primaryColor,
-            child: const Icon(
-              Icons.add,
-              color: AppColors.whiteColor,
-              size: 30,
-            ),
-            onPressed: () {
-              Get.toNamed(Routes.addContentTask);
-            },
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          FloatingActionButton(
-            backgroundColor: AppColors.primaryColor,
-            child: const Icon(
-              Icons.add,
-              color: AppColors.whiteColor,
-              size: 30,
-            ),
-            onPressed: () {
-              Get.toNamed(Routes.addDesingerTask);
-            },
-          ),
+          // FloatingActionButton(
+          //   backgroundColor: AppColors.primaryColor,
+          //   child: const Icon(
+          //     Icons.add,
+          //     color: AppColors.whiteColor,
+          //     size: 30,
+          //   ),
+          //   onPressed: () {
+          //     Get.toNamed(Routes.addContentTask);
+          //   },
+          // ),
+          // const SizedBox(
+          //   width: 10,
+          // ),
+          // FloatingActionButton(
+          //   backgroundColor: AppColors.primaryColor,
+          //   child: const Icon(
+          //     Icons.add,
+          //     color: AppColors.whiteColor,
+          //     size: 30,
+          //   ),
+          //   onPressed: () {
+          //     Get.toNamed(Routes.addDesingerTask);
+          //   },
+          // ),
         ],
       ),
       appBar: buildAppBar(context, 'ايفولا'),

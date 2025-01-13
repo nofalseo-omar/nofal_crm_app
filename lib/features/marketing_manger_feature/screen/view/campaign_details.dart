@@ -19,7 +19,6 @@ class CampaignDetails extends StatelessWidget {
         child: Row(
           children: [
             AppDrawer(
-              selectedIndex: 3,
             ),
             8.horizontalSpace,
             Expanded(

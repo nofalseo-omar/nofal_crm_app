@@ -41,7 +41,7 @@ class ContentHomeScreen extends GetView<ContentHomeController> {
         ],
       ),
       drawer: AppDrawer(
-        selectedIndex: 1,
+    
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),

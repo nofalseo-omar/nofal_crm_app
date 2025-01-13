@@ -11,8 +11,7 @@ import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppDrawer extends StatelessWidget {
-  const AppDrawer({super.key, required this.selectedIndex});
-  final int selectedIndex;
+  const AppDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,11 +48,8 @@ class AppDrawer extends StatelessWidget {
                   _buildListItem(
                     'الإشعارات',
                     AppImages.notification,
-                    bckGround: selectedIndex == 0
-                        ? AppColors.darkPrimaryColor.withOpacity(0.1)
-                        : null,
-                    txtColor:
-                        selectedIndex == 0 ? AppColors.darkPrimaryColor : null,
+                    bckGround: AppColors.darkPrimaryColor.withOpacity(0.1),
+                    txtColor: AppColors.darkPrimaryColor,
                     onTap: () {
                       Get.toNamed(Routes.notificationsScreen);
                     },
@@ -61,11 +57,8 @@ class AppDrawer extends StatelessWidget {
                   _buildListItem(
                     'إضافة',
                     AppImages.addRectangle,
-                    bckGround: selectedIndex == 0
-                        ? AppColors.darkPrimaryColor.withOpacity(0.1)
-                        : null,
-                    txtColor:
-                        selectedIndex == 0 ? AppColors.darkPrimaryColor : null,
+                    bckGround: AppColors.darkPrimaryColor.withOpacity(0.1),
+                    txtColor: AppColors.darkPrimaryColor,
                     onTap: () {
                       Get.toNamed(Routes.notificationsScreen);
                     },
@@ -73,11 +66,8 @@ class AppDrawer extends StatelessWidget {
                   _buildListItem(
                     'لوحة التحكم',
                     AppImages.grid,
-                    bckGround: selectedIndex == 0
-                        ? AppColors.darkPrimaryColor.withOpacity(0.1)
-                        : null,
-                    txtColor:
-                        selectedIndex == 0 ? AppColors.darkPrimaryColor : null,
+                    bckGround: AppColors.darkPrimaryColor.withOpacity(0.1),
+                    txtColor: AppColors.darkPrimaryColor,
                     onTap: () {
                       Get.offAllNamed(Routes.seoScreen);
                     },
@@ -85,11 +75,8 @@ class AppDrawer extends StatelessWidget {
                   _buildListItem(
                     'مهامي',
                     AppImages.users,
-                    bckGround: selectedIndex == 1
-                        ? AppColors.darkPrimaryColor.withOpacity(0.1)
-                        : null,
-                    txtColor:
-                        selectedIndex == 1 ? AppColors.darkPrimaryColor : null,
+                    bckGround: AppColors.darkPrimaryColor.withOpacity(0.1),
+                    txtColor: AppColors.darkPrimaryColor,
                     onTap: () {
                       Get.offAllNamed(Routes.homeContent);
                     },
@@ -98,17 +85,12 @@ class AppDrawer extends StatelessWidget {
                       onTap: () {
                     Get.toNamed(Routes.immediateTasksScreen);
                   },
-                      bckGround: selectedIndex == 5
-                          ? AppColors.darkPrimaryColor.withOpacity(0.1)
-                          : null,
-                      txtColor: selectedIndex == 5
-                          ? AppColors.darkPrimaryColor
-                          : null),
+                      bckGround: AppColors.darkPrimaryColor.withOpacity(0.1),
+                      txtColor: AppColors.darkPrimaryColor),
                   _buildListItem(
                     'الرسائل',
                     AppImages.chat,
-                    txtColor:
-                        selectedIndex == 2 ? AppColors.darkPrimaryColor : null,
+                    txtColor: AppColors.darkPrimaryColor,
                     onTap: () {
                       Get.offAllNamed(Routes.messagesList);
                     },

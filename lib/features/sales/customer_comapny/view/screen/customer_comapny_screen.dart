@@ -19,7 +19,6 @@ class CustomerCompanyScreen extends StatelessWidget {
         child: Row(
           children: [
             AppDrawer(
-              selectedIndex: 6,
             ),
             8.horizontalSpace,
             Expanded(

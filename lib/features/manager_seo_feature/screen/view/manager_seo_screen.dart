@@ -17,7 +17,7 @@ class ManagerSeoScreen extends StatelessWidget {
         child: Row(
           children: [
             const AppDrawer(
-              selectedIndex: 4,
+       
             ),
             8.horizontalSpace,
             Expanded(

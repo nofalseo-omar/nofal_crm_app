@@ -16,7 +16,6 @@ class CompanyTaskScreen extends StatelessWidget {
       body: Row(
         children: [
           AppDrawer(
-            selectedIndex: 7,
           ),
           SizedBox(
             height: 14,

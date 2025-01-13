@@ -15,9 +15,7 @@ class TaskScreen extends StatelessWidget {
       backgroundColor: Color.fromRGBO(0, 45, 13, 0.05),
       body: Row(
         children: [
-          AppDrawer(
-            selectedIndex: 2,
-          ),
+          AppDrawer(),
           SizedBox(
             height: 14,
           ),
