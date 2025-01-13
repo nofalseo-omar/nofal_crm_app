@@ -1,10 +1,12 @@
 import 'package:nofal_crm_app/components/textFields/custom_text_field.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
 import 'package:nofal_crm_app/features/messages_feature/screen/widgets/message_list_item_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:nofal_crm_app/routes/app_routes.dart';
 
 class MessagesList extends StatelessWidget {
   const MessagesList({super.key});
@@ -13,7 +15,7 @@ class MessagesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: Get.height,
-      width: Get.width * 0.21,
+      // width: Get.width * 0.21,
       decoration: BoxDecoration(
         color: AppColors.whiteColor,
         borderRadius: BorderRadius.circular(14.r),
@@ -26,54 +28,38 @@ class MessagesList extends StatelessWidget {
           ),
         ],
       ),
-      child: ListView(
-        shrinkWrap: true,
-        // crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(20.w, 29.h, 20.w, 0),
-            child: Row(
-              children: [
-                Text("الرسائل", style: context.f20500),
-                8.horizontalSpace,
-                CircleAvatar(
-                  radius: 15.r,
-                  backgroundColor: AppColors.grey2,
-                  child: const Text('3'),
-                ),
-              ],
+      child: SingleChildScrollView(
+        // padding: EdgeInsets.symmetric(horizontal: 20.w),
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: TextFieldComponent(
+                hintText: 'ابحث',
+                fillColor: Color(0xffE6E6EA).withOpacity(0.20),
+                borderColor: Color(0xffE6E6EA).withOpacity(0.20),
+                // radius: 4.r,
+                validator: (String) {},
+              ),
             ),
-          ),
-          Divider(
-            height: 25.h,
-            thickness: 1,
-            color: AppColors.black2Color.withOpacity(0.10),
-          ),
-          SingleChildScrollView(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
-            child: Column(
-              children: [
-                TextFieldComponent(
-                  hintText: 'ابحث',
-                  fillColor: AppColors.lightwhiteColor,
-                  borderColor: AppColors.lightwhiteColor,
-                  radius: 4.r,
+            SizedBox(height: 20.h),
+            ...List.generate(
+              20,
+              (index) => GestureDetector(
+                onTap: () => Get.toNamed(Routes.messagesScreen),
+                child: MessageListItemBuilder(
+                  image:
+                      'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                  name: "أسامة حسن",
+                  backgroundColor:
+                      index % 2 == 0 ? Color(0xffEDF3F8) : AppColors.whiteColor,
+                  last_message: "شوف السيرفر تاني",
+                  time: DateTime.now(),
                 ),
-                20.verticalSpace,
-                ...List.generate(
-                  20,
-                  (index) => const MessageListItemBuilder(
-                    image:
-                        'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                    name: "test name with long option",
-                    last_message: "test message with long message as an option",
-                    time: '10:00',
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

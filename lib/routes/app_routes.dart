@@ -5,6 +5,7 @@ class Routes {
   static const String companyTaskScreen = '/CompanyTaskScreen';
 
   static const String messagesScreen = '/messageScreen';
+  static const String messagesList = '/messagesList';
   static const String socialMediaStatus = '/socialMediaStatus';
   static const String socialMediaStatusDetails = '/socialMediaStatusDetails';
   static const String projectStatusScreen = '/ProjectStatusScreen';

@@ -66,7 +66,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                   Expanded(
                     flex: 5,
                     child: Text(
-                      title! ?? '',
+                      title ?? '',
                       overflow: TextOverflow.ellipsis,
                       style: context.f16700?.copyWith(
                         color: AppColors.blackColor,

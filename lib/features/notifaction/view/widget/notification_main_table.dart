@@ -10,40 +10,21 @@ class NotificationMainTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Card(
-        margin: const EdgeInsets.all(0),
-        color: const Color(0xffFfffff),
-        child: SingleChildScrollView(
-          child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
-                child: Row(
-                  children: [
-                    Text('الإشعارات',
-                        style: context.f20500
-                            ?.copyWith(color: const Color(0xff020202))),
-                    const Spacer(),
-                    Text('مسح الكل',
-                        style: context.f20500
-                            ?.copyWith(color: const Color(0xffD20000))),
-                  ],
+      child: SingleChildScrollView(
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ...List.generate(6, (i) {
+              return GestureDetector(
+                onTap: () {},
+                child: NotifiactionRowWidget(
+                  title: 'مرحلة الوعي',
+                  icon: image,
+                  time: '٢:٣٧ م',
                 ),
-              ),
-              ...List.generate(6, (i) {
-                return GestureDetector(
-                  onTap: () {},
-                  child: NotifiactionRowWidget(
-                    title: 'مرحلة الوعي',
-                    icon: image,
-                    time: '٢:٣٧ م',
-                  ),
-                );
-              })
-            ],
-          ),
+              );
+            })
+          ],
         ),
       ),
     );
