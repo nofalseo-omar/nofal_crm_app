@@ -1,4 +1,5 @@
-import 'package:nofal_crm_app/components/dailog/add_content_creator_dailog.dart';
+import 'package:nofal_crm_app/features/content_creator/task/logic/controller/content_task_controller.dart';
+import 'package:nofal_crm_app/features/content_creator/task/view/screens/add_content_creator_dailog.dart';
 import 'package:nofal_crm_app/features/Media/media_home/view/screen/media_home_screen.dart';
 import 'package:nofal_crm_app/features/content_creator/home/logic/controller/content_home_controller.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/content_home_projects.dart';
@@ -52,7 +53,10 @@ appPages() => [
           transition: Transition.fadeIn),
       GetPage(
           name: Routes.addContentTask,
-          page: () => const AddContentCreatorDialog(),
+          page: () => const ContentCreatorTaskScreen(),
+          binding: BindingsBuilder(() {
+            Get.lazyPut(() => ContentTaskController());
+          }),
           transition: Transition.fadeIn),
       GetPage(
           name: Routes.addDesingerTask,

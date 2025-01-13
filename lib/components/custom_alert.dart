@@ -46,8 +46,8 @@ void showCustomAlert(
                   child: CustomButton(
                       text: button1,
                       onTap: () {
-                        onTap1();
                         Get.back();
+                        onTap1();
                       }),
                 ),
                 10.horizontalSpace,
@@ -55,8 +55,8 @@ void showCustomAlert(
                   child: CustomButton(
                       text: button2,
                       onTap: () {
-                        onTap2();
                         Get.back();
+                        onTap2();
                       }),
                 ),
               ],

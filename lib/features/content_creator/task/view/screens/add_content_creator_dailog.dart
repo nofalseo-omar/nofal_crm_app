@@ -1,3 +1,4 @@
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/components/textFields/custom_text_field.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
@@ -5,12 +6,13 @@ import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/connection_duration_widget.dart';
+import 'package:nofal_crm_app/features/content_creator/task/logic/controller/content_task_controller.dart';
 import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/sub_compontets/pick_user.dart';
 
-import '../image_gallery_widget.dart';
+import '../../../../../components/image_gallery_widget.dart';
 
-class AddContentCreatorDialog extends StatelessWidget {
-  const AddContentCreatorDialog({super.key});
+class ContentCreatorTaskScreen extends GetView<ContentTaskController> {
+  const ContentCreatorTaskScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
