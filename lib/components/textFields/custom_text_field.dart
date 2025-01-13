@@ -170,69 +170,69 @@ class _TextFieldComponentState extends State<TextFieldComponent> {
                       )
                     : null),
             contentPadding: const EdgeInsets.all(8),
-            // enabledBorder: widget.withBorder != null
-            //     ? InputBorder.none
-            //     : OutlineInputBorder(
-            //         borderRadius: BorderRadius.circular(widget.radius ?? 14),
-            //         borderSide: BorderSide(
-            //           color: widget.borderColor ?? Colors.grey,
-            //         )),
-            // border: widget.withBorder != null
-            //     ? InputBorder.none
-            //     : OutlineInputBorder(
-            //         borderRadius: BorderRadius.circular(14),
-            //         borderSide: BorderSide(
-            //           color: widget.borderColor ?? Colors.grey,
-            //         )),
-            // focusedBorder: widget.withBorder != null
-            //     ? InputBorder.none
-            //     : OutlineInputBorder(
-            //         borderRadius: BorderRadius.circular(14),
-            //         borderSide:
-            //             BorderSide(color: widget.borderColor ?? Colors.grey)),
-            // disabledBorder: widget.withBorder != null
-            //     ? InputBorder.none
-            //     : OutlineInputBorder(
-            //         borderRadius: BorderRadius.circular(14),
-            //         borderSide:
-            //             BorderSide(color: widget.borderColor ?? Colors.grey)),
-            // errorBorder: widget.withBorder != null
-            //     ? InputBorder.none
-            //     : OutlineInputBorder(
-            //         borderRadius: BorderRadius.circular(14),
-            //         borderSide: const BorderSide(color: Colors.red)),
-            disabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey,
-              ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(8.0),
-              ),
-            ),
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey,
-              ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(8.0),
-              ),
-            ),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey,
-              ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(8.0),
-              ),
-            ),
-            border: const OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey,
-              ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(8.0),
-              ),
-            ),
+            enabledBorder: widget.withBorder != null
+                ? InputBorder.none
+                : OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(widget.radius ?? 14),
+                    borderSide: BorderSide(
+                      color: widget.borderColor ?? Colors.grey,
+                    )),
+            border: widget.withBorder != null
+                ? InputBorder.none
+                : OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    borderSide: BorderSide(
+                      color: widget.borderColor ?? Colors.grey,
+                    )),
+            focusedBorder: widget.withBorder != null
+                ? InputBorder.none
+                : OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    borderSide:
+                        BorderSide(color: widget.borderColor ?? Colors.grey)),
+            disabledBorder: widget.withBorder != null
+                ? InputBorder.none
+                : OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    borderSide:
+                        BorderSide(color: widget.borderColor ?? Colors.grey)),
+            errorBorder: widget.withBorder != null
+                ? InputBorder.none
+                : OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    borderSide: const BorderSide(color: Colors.red)),
+            // disabledBorder: const OutlineInputBorder(
+            //   borderSide: BorderSide(
+            //     color: Colors.grey,
+            //   ),
+            //   borderRadius: BorderRadius.all(
+            //     Radius.circular(8.0),
+            //   ),
+            // ),
+            // enabledBorder: const OutlineInputBorder(
+            //   borderSide: BorderSide(
+            //     color: Colors.grey,
+            //   ),
+            //   borderRadius: BorderRadius.all(
+            //     Radius.circular(8.0),
+            //   ),
+            // ),
+            // focusedBorder: const OutlineInputBorder(
+            //   borderSide: BorderSide(
+            //     color: Colors.grey,
+            //   ),
+            //   borderRadius: BorderRadius.all(
+            //     Radius.circular(8.0),
+            //   ),
+            // ),
+            // border: const OutlineInputBorder(
+            //   borderSide: BorderSide(
+            //     color: Colors.grey,
+            //   ),
+            //   borderRadius: BorderRadius.all(
+            //     Radius.circular(8.0),
+            //   ),
+            // ),
             prefixIcon: widget.prefixIcon,
             filled: widget.fillColor != null,
             fillColor: widget.fillColor,

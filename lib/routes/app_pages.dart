@@ -11,6 +11,7 @@ import 'package:nofal_crm_app/features/manager_seo_feature/screen/view/manager_s
 import 'package:nofal_crm_app/features/marketing_manger_feature/screen/view/campaign_details.dart';
 import 'package:nofal_crm_app/features/content_creator/project_status/view/screen/project_status_screen.dart';
 import 'package:nofal_crm_app/features/marketing_manger_feature/screen/view/marketing_manger_screen.dart';
+import 'package:nofal_crm_app/features/messages_feature/screen/view/messages_list.dart';
 
 import 'package:nofal_crm_app/features/messages_feature/screen/view/messages_screen.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
@@ -62,6 +63,10 @@ appPages() => [
       GetPage(
         name: Routes.messagesScreen,
         page: () => const MessagesScreen(),
+      ),
+      GetPage(
+        name: Routes.messagesList,
+        page: () => const MessagesListScreen(),
       ),
       GetPage(
           name: Routes.socialMediaStatus,

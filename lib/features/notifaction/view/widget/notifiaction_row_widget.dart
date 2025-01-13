@@ -15,35 +15,60 @@ class NotifiactionRowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-          color: AppColors.lightBlue.withOpacity(.1),
-          borderRadius: BorderRadius.circular(10)),
-      child: Row(
-        children: [
-          ClipOval(
-            // backgroundColor: AppColors.whiteColor,
-            child: CustomImageHandler(
-              icon,
-              width: 35.sp,
-              fit: BoxFit.cover,
-              height: 35.sp,
-            ),
-          ),
-          8.horizontalSpace,
-          Text(
-            'لقد آرفق محمد عجمي مهمة الآن',
-            style: context.f20500,
-          ),
-          const Spacer(),
-          Text(
-            time!,
-            style: context.f20500!.copyWith(color: AppColors.offWhite),
-          )
-        ],
+    return ListTile(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(13),
+      ),
+      
+      leading: ClipOval(
+        // backgroundColor: AppColors.whiteColor,
+        child: CustomImageHandler(
+          icon,
+          width: 35.sp,
+          fit: BoxFit.cover,
+          height: 35.sp,
+        ),
+      ),
+      subtitle: Text(
+        title!,
+        style: context.f14700,
+      ),
+      title: Text(
+        time!,
+        style: context.f14700!.copyWith(color: AppColors.offWhite),
       ),
     );
+    // Container(
+    //   padding: const EdgeInsets.all(16),
+    //   margin: const EdgeInsets.all(8),
+    //   decoration: BoxDecoration(
+    //       // color: AppColors.lightBlue.withOpacity(.1),
+    //       borderRadius: BorderRadius.circular(10)),
+    //   child:
+
+    //    Row(
+    //     children: [
+    // ClipOval(
+    //   // backgroundColor: AppColors.whiteColor,
+    //   child: CustomImageHandler(
+    //     icon,
+    //     width: 35.sp,
+    //     fit: BoxFit.cover,
+    //     height: 35.sp,
+    //   ),
+    // ),
+    //       // 8.horizontalSpace,
+    //       // Text(
+    //       //   'لقد آرفق محمد عجمي مهمة الآن',
+    //       //   style: context.f20500,
+    //       // ),
+    //       // const Spacer(),
+    //       // Text(
+    //       //   time!,
+    //       //   style: context.f20500!.copyWith(color: AppColors.offWhite),
+    //       // )
+    //     ],
+    //   ),
+    // );
   }
 }

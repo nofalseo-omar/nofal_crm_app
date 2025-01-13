@@ -7,11 +7,14 @@ class TableCellItem extends StatelessWidget {
     super.key,
     required this.title,
     this.subTitle,
+    this.subTitleWidget,
     this.titleStyle,
+    this.subTitleStyle,
   });
 
   final String? title, subTitle;
-  final TextStyle? titleStyle;
+  final TextStyle? titleStyle, subTitleStyle;
+  final Widget? subTitleWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -25,21 +28,23 @@ class TableCellItem extends StatelessWidget {
             children: [
               Text(
                 title!,
-                style: subTitle != null
+                style: subTitle != null || subTitleWidget != null
                     ? titleStyle ??
                         context.f16600?.copyWith(color: const Color(0xff545472))
                     : context.f16700?.copyWith(color: const Color(0xff000000)),
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
               ),
-              if (subTitle != null) ...[
+              if (subTitle != null || subTitleWidget != null) ...[
                 const SizedBox(height: 4),
-                Text(
-                  subTitle!,
-                  style: context.f16600?.copyWith(color: AppColors.blackColor),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                ),
+                subTitleWidget ??
+                    Text(
+                      subTitle!,
+                      style: subTitleStyle ??
+                          context.f16600?.copyWith(color: AppColors.blackColor),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
               ],
             ],
           ),

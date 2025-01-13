@@ -94,8 +94,10 @@ class AppDrawer extends StatelessWidget {
                       Get.offAllNamed(Routes.homeContent);
                     },
                   ),
-                  _buildListItem('مهام فورية', AppImages.sent,
-                      count: 2,
+                  _buildListItem('مهام فورية', AppImages.sent, count: 2,
+                      onTap: () {
+                    Get.toNamed(Routes.immediateTasksScreen);
+                  },
                       bckGround: selectedIndex == 5
                           ? AppColors.darkPrimaryColor.withOpacity(0.1)
                           : null,
@@ -108,7 +110,7 @@ class AppDrawer extends StatelessWidget {
                     txtColor:
                         selectedIndex == 2 ? AppColors.darkPrimaryColor : null,
                     onTap: () {
-                      Get.offAllNamed(Routes.messagesScreen);
+                      Get.offAllNamed(Routes.messagesList);
                     },
                   ),
                   _buildListItem('الإعدادات', AppImages.setting),
@@ -154,7 +156,10 @@ Widget _buildListItem(
   VoidCallback? onTap,
 }) {
   return GestureDetector(
-    onTap: onTap,
+    onTap: () {
+      Get.back();
+      onTap!();
+    },
     child: Container(
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
