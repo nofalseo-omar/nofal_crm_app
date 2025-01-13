@@ -16,34 +16,26 @@ class MessageTextField extends StatelessWidget {
       padding: EdgeInsets.all(20),
       child: Row(
         children: [
-          Icon(
-            Icons.add,
-            color: AppColors.darkPrimaryColor,
-            size: 32.sp,
-          ),
+          CustomImageHandler(AppImages.camera),
+          10.horizontalSpace,
           Expanded(
             child: TextFieldComponent(
               hintText: 'اكتب استفسارك هنا ....',
               radius: 14.r,
               fillColor: AppColors.lightwhiteColor,
               borderColor: AppColors.lightwhiteColor,
-              suffixIcon: Container(
-                margin: EdgeInsetsDirectional.only(end: 5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.sp),
-                  color: AppColors.darkPrimaryColor,
-                ),
-                // width: 48.w,
-                // height: 48.h,
-                padding: EdgeInsets.all(5),
+              suffixIcon: Padding(
+                padding: EdgeInsets.all(12.sp),
                 child: CustomImageHandler(
-                  AppImages.send,
-                  width: 24.sp,
-                  height: 24.sp,
+                  AppImages.smile,
+                  width: 20.sp,
+                  height: 20.sp,
                 ),
               ),
             ),
-          )
+          ),
+          10.horizontalSpace,
+          CustomImageHandler(AppImages.mic),
         ],
       ),
     );

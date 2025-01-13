@@ -12,36 +12,8 @@ class CompanyTaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color.fromRGBO(0, 45, 13, 0.05),
-      body: Row(
-        children: [
-          AppDrawer(
-          ),
-          SizedBox(
-            height: 14,
-          ),
-          Expanded(
-            child: Column(children: [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: CustomAppBarWidget(),
-              ),
-              Expanded(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(flex: 5, child: ContactTaskCompany()),
-                    SizedBox(
-                      width: 18,
-                    ),
-                    DeveloperHomeDrawerWidget(),
-                  ],
-                ),
-              ),
-            ]),
-          ),
-        ],
-      ),
+      // backgroundColor: Color.fromRGBO(0, 45, 13, 0.05),
+      body: ContactTaskCompany(),
     );
   }
 }

@@ -3,7 +3,7 @@ class Routes {
   static const String homeContent = '/homeContent';
   static const String taskContact = '/taskContact';
   static const String companyTaskScreen = '/CompanyTaskScreen';
-
+  static const String salesHome = '/salesHome';
   static const String messagesScreen = '/messageScreen';
   static const String messagesList = '/messagesList';
   static const String socialMediaStatus = '/socialMediaStatus';

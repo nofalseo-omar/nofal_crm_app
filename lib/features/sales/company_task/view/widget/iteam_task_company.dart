@@ -13,7 +13,7 @@ class ItemTaskCompany extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: Get.width * 0.2,
+      width: Get.width,
       decoration: BoxDecoration(
         color: const Color(0xffE8F8FE),
         borderRadius: BorderRadius.circular(10),

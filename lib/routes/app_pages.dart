@@ -18,6 +18,8 @@ import 'package:nofal_crm_app/features/content_creator/social_media_status/view/
 import 'package:nofal_crm_app/features/notifaction/view/screen/noification_screen.dart';
 import 'package:nofal_crm_app/features/sales/company_task/view/screen/company_task_screen.dart';
 import 'package:nofal_crm_app/features/sales/customer_comapny/view/screen/customer_comapny_screen.dart';
+import 'package:nofal_crm_app/features/sales/sales_home/data/binding/sales_home_binding.dart';
+import 'package:nofal_crm_app/features/sales/sales_home/view/screen/sales_view.dart';
 import 'package:nofal_crm_app/features/seo/screen/view/seo_screen.dart';
 import 'package:nofal_crm_app/features/tasks/logic/binding/task_binding.dart';
 import 'package:nofal_crm_app/features/tasks/view/screens/task_sreen.dart';
@@ -27,7 +29,7 @@ import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class AppPages {
-  static const initial = Routes.homeContent;
+  static const initial = Routes.salesHome;
 }
 
 appPages() => [
@@ -60,6 +62,15 @@ appPages() => [
           name: Routes.companyTaskScreen,
           page: () => const CompanyTaskScreen(),
           transition: Transition.fadeIn),
+      GetPage(
+          name: Routes.salesHome,
+          page: () => const SalesView(),
+          binding: SalesHomeBinding(),
+          transition: Transition.fadeIn),
+      // GetPage(
+      //     name: Routes.companyTaskScreen,
+      //     page: () => const CompanyTaskScreen(),
+      //     transition: Transition.fadeIn),
       GetPage(
         name: Routes.messagesScreen,
         page: () => const MessagesScreen(),
