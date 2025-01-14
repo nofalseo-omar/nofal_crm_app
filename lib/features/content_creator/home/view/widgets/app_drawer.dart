@@ -81,6 +81,15 @@ class AppDrawer extends StatelessWidget {
                       Get.offAllNamed(Routes.homeContent);
                     },
                   ),
+                  _buildListItem(
+                    'قائمة العملاء',
+                    AppImages.users,
+                    bckGround: AppColors.darkPrimaryColor.withOpacity(0.1),
+                    txtColor: AppColors.darkPrimaryColor,
+                    onTap: () {
+                      Get.offAllNamed(Routes.homeContent);
+                    },
+                  ),
                   _buildListItem('مهام فورية', AppImages.sent, count: 2,
                       onTap: () {
                     Get.toNamed(Routes.immediateTasksScreen);

@@ -75,7 +75,7 @@ class CrmFlutter extends StatelessWidget {
 
         // home: const TextDrawer(),
 
-        initialRoute: Routes.salesHome,
+        initialRoute: Routes.salesAdminHome,
         locale: const Locale('ar'),
 
         // getRoute(

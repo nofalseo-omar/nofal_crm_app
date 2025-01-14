@@ -25,6 +25,8 @@ import 'package:nofal_crm_app/features/sales/customer_comapny/view/screen/custom
 import 'package:nofal_crm_app/features/sales/company_task/view/screen/show_task_screen.dart';
 import 'package:nofal_crm_app/features/sales/sales_home/data/binding/sales_home_binding.dart';
 import 'package:nofal_crm_app/features/sales/sales_home/view/screen/sales_view.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_home/logic/binding/sales_admin_binding.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_home/view/screen/sales_admin_view.dart';
 import 'package:nofal_crm_app/features/seo/screen/view/seo_screen.dart';
 import 'package:nofal_crm_app/features/tasks/logic/binding/task_binding.dart';
 import 'package:nofal_crm_app/features/tasks/view/screens/task_sreen.dart';
@@ -34,7 +36,7 @@ import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class AppPages {
-  static const initial = Routes.salesHome;
+  static const initial = Routes.salesAdminHome;
 }
 
 appPages() => [
@@ -88,9 +90,16 @@ appPages() => [
         page: () => const MessagesListScreen(),
       ),
       GetPage(
-          name: Routes.socialMediaStatus,
-          page: () => const SocialMediaStatusScreen(),
-          transition: Transition.fadeIn),
+        name: Routes.salesAdminHome,
+        page: () => const SalesAdminView(),
+        binding: SalesAdminBinding(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.socialMediaStatus,
+        page: () => const SocialMediaStatusScreen(),
+        transition: Transition.fadeIn,
+      ),
       GetPage(
           name: Routes.socialMediaStatusDetails,
           page: () => const SocialMediaStatusDetailsScreen(),

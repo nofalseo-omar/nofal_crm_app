@@ -21,6 +21,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
     this.flex = 3,
     this.nameOfKeyOfStyle,
     this.date,
+    this.subTitleColor,
   });
 
   final String? icon, title;
@@ -31,6 +32,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
   final Color? backgroundColor;
   final TextStyle? textStyle;
   final int flex;
+  final List<Color>? subTitleColor;
   final String? nameOfKeyOfStyle;
   final String? date;
   final String? subTitle;
@@ -137,7 +139,16 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                     children: tableItems.entries.map((entry) {
                       return TableCellItem(
                         title: entry.key,
-                        subTitle: entry.value == "*" ? null : entry.value,
+                        subTitle: entry.value == "*"
+                            ? null
+                            : entry.value![entry.value!.length - 1] == "*"
+                                ? entry.value!
+                                    .substring(0, entry.value!.length - 1)
+                                : entry.value,
+                        subTitleStyle: TextStyle(
+                            color: entry.value![entry.value!.length - 1] == "*"
+                                ? AppColors.greenColor
+                                : AppColors.blackColor),
                         titleStyle: nameOfKeyOfStyle == null
                             ? textStyle
                             : entry.value == '*'
@@ -180,5 +191,15 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
         ),
       );
     });
+  }
+}
+
+extension FicListExtension<T> on List<T> {
+  /// Maps each element of the list.
+  /// The [map] function gets both the original [item] and its [index].
+  Iterable<E> mapIndexed<E>(E Function(int index, T item) map) sync* {
+    for (var index = 0; index < length; index++) {
+      yield map(index, this[index]);
+    }
   }
 }
