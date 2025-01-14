@@ -1,11 +1,11 @@
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/show_writing_dailog.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/show_writing_dailog.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import '../../../components/custom_image_handler.dart';
-import '../../../components/image_gallery_widget.dart';
-import '../../../components/textFields/custom_text_field.dart';
-import '../../../core/constants/app_images_path.dart';
+import '../../../../components/custom_image_handler.dart';
+import '../../../../components/image_gallery_widget.dart';
+import '../../../../components/textFields/custom_text_field.dart';
+import '../../../../core/constants/app_images_path.dart';
 
 class ShowImagesBodyDialog extends StatelessWidget {
   const ShowImagesBodyDialog({super.key});

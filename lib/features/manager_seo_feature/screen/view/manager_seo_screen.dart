@@ -4,6 +4,7 @@ import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_dra
 import 'package:nofal_crm_app/features/manager_seo_feature/screen/widget/seo_table.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/screen/widget/campaign.dart';
 
 class ManagerSeoScreen extends StatelessWidget {
   const ManagerSeoScreen({super.key});
@@ -16,9 +17,7 @@ class ManagerSeoScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            const AppDrawer(
-       
-            ),
+            const AppDrawer(),
             8.horizontalSpace,
             Expanded(
               child: Column(
@@ -29,7 +28,7 @@ class ManagerSeoScreen extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Campaign(),
+                        const Campaign(),
                         const SeoTable(),
                         8.horizontalSpace,
                         const FittedBox(child: DeveloperHomeDrawerWidget())

@@ -2,11 +2,11 @@ import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/show_images_dailog.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/show_images_dailog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../components/textFields/custom_text_field.dart';
+import '../../../../components/textFields/custom_text_field.dart';
 
 class ViewWritingMarketDailog extends StatefulWidget {
   const ViewWritingMarketDailog({super.key});

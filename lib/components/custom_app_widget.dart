@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:super_tooltip/super_tooltip.dart';
 import '../core/utils/app_colors.dart';
-import '../features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
+import '../features/marketing_manger_feature/view/dailgoes/add_immediate_task_dialog.dart';
 import 'dailog/View_immediate_task.dart';
 
 class CustomAppBarWidget extends StatelessWidget {

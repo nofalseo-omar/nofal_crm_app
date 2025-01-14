@@ -6,8 +6,8 @@ import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/core/utils/app_validation_functions.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/sub_compontets/pick_user.dart';
-import '../../../components/textFields/custom_text_field.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/sub_compontets/pick_user.dart';
+import '../../../../components/textFields/custom_text_field.dart';
 
 class AddImmediateTaskDailog extends StatefulWidget {
   const AddImmediateTaskDailog({super.key});
