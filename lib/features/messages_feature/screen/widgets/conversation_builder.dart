@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:nofal_crm_app/components/custom_image_handler.dart';
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/messages_feature/screen/widgets/message_builder.dart';
 import 'package:nofal_crm_app/features/messages_feature/screen/widgets/message_text_field.dart';

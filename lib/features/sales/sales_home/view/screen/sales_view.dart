@@ -10,7 +10,6 @@ import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
-import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/users_view_circles.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/status_widget.dart';
 import 'package:nofal_crm_app/features/sales/sales_home/data/controller/sales_home_controller.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';

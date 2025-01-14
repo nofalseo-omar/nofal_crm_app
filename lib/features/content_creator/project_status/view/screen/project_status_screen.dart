@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/project_status/logic/controller/project_status_controller.dart';
 import 'package:nofal_crm_app/features/content_creator/project_status/view/widget/project_status_table.dart';

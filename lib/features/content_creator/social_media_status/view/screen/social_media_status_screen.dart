@@ -6,7 +6,6 @@ import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/widgets/social_media_table.dart';
 import 'package:flutter/material.dart';
-import 'package:nofal_crm_app/routes/app_routes.dart';
 
 class SocialMediaStatusScreen extends StatelessWidget {
   const SocialMediaStatusScreen({super.key});
@@ -15,7 +14,7 @@ class SocialMediaStatusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      drawer: AppDrawer( ),
+      drawer: const AppDrawer( ),
       body: const SocialMediaTable(),
       floatingActionButton: const Row(
         mainAxisAlignment: MainAxisAlignment.end,

@@ -1,6 +1,3 @@
-import 'package:nofal_crm_app/components/custom_image_handler.dart';
-import 'package:nofal_crm_app/core/constants/app_images_path.dart';
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/widgets/social_media__details_table.dart';

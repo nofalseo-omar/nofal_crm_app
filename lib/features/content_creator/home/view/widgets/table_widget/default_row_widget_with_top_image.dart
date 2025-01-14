@@ -83,7 +83,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                             subTitle ?? '',
                             overflow: TextOverflow.ellipsis,
                             style: context.f12500?.copyWith(
-                              color: Color(0xff545472),
+                              color: const Color(0xff545472),
                             ),
                           ),
                       ],
