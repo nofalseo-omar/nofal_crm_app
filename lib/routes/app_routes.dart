@@ -15,6 +15,8 @@ class Routes {
   static const String managerSeoDetailsScreen = '/ManagerSeoDetailsScreen';
   static const String notificationsScreen = '/NotificationScreen';
   static const String customerCompanyDetails = '/customerCompanyDetailsScreen';
+  static const String showTaskScreen = '/showTaskScreen';
+  static const String addCustomer = '/addCustomer';
   static const String mediaHomeScreen = '/mediaHomeScreen';
   static const String seoScreen = '/seoScreen';
   static const String immediateTasksScreen = '/immediateTasksScreen';

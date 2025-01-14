@@ -75,7 +75,7 @@ class SalesView extends GetView<SalesHomeController> {
                         color: AppColors.darkPrimaryColor,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
               12.verticalSpace,
@@ -97,7 +97,7 @@ class SalesView extends GetView<SalesHomeController> {
                       width: Get.width * 0.9,
                       child: GestureDetector(
                         onTap: () {
-                          Get.toNamed(Routes.socialMediaStatus);
+                          // Get.toNamed(Routes.socialMediaStatus);
                         },
                         child: DefaultRowWidgetWithTopImage(
                           // icon: AppImages.users,
@@ -162,9 +162,25 @@ class SalesView extends GetView<SalesHomeController> {
                 ),
               ),
               20.verticalSpace,
-              Text(
-                'قائمة العملاء',
-                style: context.f20500,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'قائمة العملاء',
+                    style: context.f20500,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Get.toNamed(Routes.customerCompanyDetails);
+                    },
+                    child: Text(
+                      'عرض المزيد',
+                      style: context.f15600!.copyWith(
+                        color: AppColors.darkPrimaryColor,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               12.verticalSpace,
               // default
