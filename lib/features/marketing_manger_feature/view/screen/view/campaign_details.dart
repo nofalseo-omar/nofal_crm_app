@@ -3,7 +3,7 @@
 import 'package:nofal_crm_app/components/custom_app_widget.dart';
 import 'package:nofal_crm_app/components/developer_drawer_widget.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/screen/widget/campaign_details_table.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/screen/widget/campaign_details_table.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

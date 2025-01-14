@@ -6,7 +6,7 @@ import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/connection_duration_widget.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/sub_compontets/pick_user.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/sub_compontets/pick_user.dart';
 
 class AddDesignerTask extends StatelessWidget {
   const AddDesignerTask({super.key});

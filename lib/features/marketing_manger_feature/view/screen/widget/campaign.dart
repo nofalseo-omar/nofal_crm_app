@@ -3,7 +3,7 @@
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/screen/widget/campaign_dialog.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/screen/widget/campaign_dialog.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

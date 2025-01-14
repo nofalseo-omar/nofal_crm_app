@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/table_cell_item.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/show_immediate_task_dialog.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/show_immediate_task_dialog.dart';
 
 class ImmediateTasksTable extends StatelessWidget {
   const ImmediateTasksTable({super.key});

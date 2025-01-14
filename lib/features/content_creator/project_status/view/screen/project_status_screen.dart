@@ -5,7 +5,7 @@ import 'package:nofal_crm_app/features/content_creator/project_status/logic/cont
 import 'package:nofal_crm_app/features/content_creator/project_status/view/widget/project_status_table.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/add_immediate_task_dialog.dart';
 
 class ProjectStatusScreen extends GetView<ProjectStautsController> {
   const ProjectStatusScreen({super.key});

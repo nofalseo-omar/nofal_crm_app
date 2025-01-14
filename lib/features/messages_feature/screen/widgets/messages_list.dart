@@ -1,7 +1,7 @@
 import 'package:nofal_crm_app/components/textFields/custom_text_field.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/add_immediate_task_dialog.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/add_immediate_task_dialog.dart';
 import 'package:nofal_crm_app/features/messages_feature/screen/widgets/message_list_item_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

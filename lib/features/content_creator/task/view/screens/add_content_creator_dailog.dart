@@ -7,7 +7,7 @@ import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/connection_duration_widget.dart';
 import 'package:nofal_crm_app/features/content_creator/task/logic/controller/content_task_controller.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/dailgoes/sub_compontets/pick_user.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/sub_compontets/pick_user.dart';
 
 import '../../../../../components/image_gallery_widget.dart';
 

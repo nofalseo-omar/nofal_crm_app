@@ -9,9 +9,10 @@ import 'package:nofal_crm_app/features/designer/dailog_designer.dart';
 import 'package:nofal_crm_app/features/immediate_tasks_feature/screen/view/immediate_tasks_screen.dart';
 import 'package:nofal_crm_app/features/manager_seo_feature/screen/view/manager_seo_details.dart';
 import 'package:nofal_crm_app/features/manager_seo_feature/screen/view/manager_seo_screen.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/screen/view/campaign_details.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/logic/bindings/show_task_binding.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/screen/view/campaign_details.dart';
 import 'package:nofal_crm_app/features/content_creator/project_status/view/screen/project_status_screen.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/screen/view/marketing_manger_screen.dart';
+import 'package:nofal_crm_app/features/marketing_manger_feature/view/screen/view/marketing_manger_screen.dart';
 import 'package:nofal_crm_app/features/messages_feature/screen/view/messages_list.dart';
 
 import 'package:nofal_crm_app/features/messages_feature/screen/view/messages_screen.dart';
@@ -114,6 +115,7 @@ appPages() => [
       GetPage(
         name: Routes.marketingMangerScreen,
         page: () => const MarketingMangerScreen(),
+        binding: MarketManagerHomeBindings(),
         transition: Transition.fadeIn,
       ),
       GetPage(
