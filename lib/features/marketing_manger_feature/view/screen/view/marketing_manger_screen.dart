@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
+import 'package:nofal_crm_app/components/developer_drawer_widget.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
+import 'package:nofal_crm_app/features/Media/media_home/view/widgets/campaign_table.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/users_view_circles.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/status_widget.dart';
+import 'package:nofal_crm_app/features/content_creator/home/widgets/table_widget/main_table.dart';
 import 'package:nofal_crm_app/features/marketing_manger_feature/logic/controller/markiting_manager_home_controller.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 
@@ -57,10 +60,13 @@ class MarketingMangerScreen extends GetView<MarketingManagerHomeController> {
                     style: context.f20500,
                   ),
                   const Spacer(),
-                  Text(
-                    'عرض المزيد',
-                    style: context.f15600!.copyWith(
-                      color: AppColors.darkPrimaryColor,
+                  GestureDetector(
+                    onTap: () => Get.toNamed(Routes.projects),
+                    child: Text(
+                      'عرض المزيد',
+                      style: context.f15600!.copyWith(
+                        color: AppColors.darkPrimaryColor,
+                      ),
                     ),
                   )
                 ],
@@ -115,7 +121,7 @@ class MarketingMangerScreen extends GetView<MarketingManagerHomeController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.customerCompanyDetails);
+                      // Get.toNamed(Routes.customerCompanyDetails);
                     },
                     child: Text(
                       'عرض المزيد',

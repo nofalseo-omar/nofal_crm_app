@@ -18,6 +18,7 @@ import 'package:nofal_crm_app/features/messages_feature/screen/view/messages_lis
 import 'package:nofal_crm_app/features/messages_feature/screen/view/messages_screen.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
 import 'package:nofal_crm_app/features/notifaction/view/screen/noification_screen.dart';
+import 'package:nofal_crm_app/features/projects/view/screen/projects_screen.dart';
 import 'package:nofal_crm_app/features/sales/company_task/view/screen/company_task_screen.dart';
 import 'package:nofal_crm_app/features/sales/company_task/logic/binding/show_task_binding.dart';
 import 'package:nofal_crm_app/features/sales/customer_comapny/logic/binding/add_customer_binding.dart';
@@ -164,6 +165,11 @@ appPages() => [
       GetPage(
         name: Routes.immediateTasksScreen,
         page: () => const ImmediateTasksScreen(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.projects,
+        page: () => const ProjectsScreen(),
         transition: Transition.fadeIn,
       ),
     ];
