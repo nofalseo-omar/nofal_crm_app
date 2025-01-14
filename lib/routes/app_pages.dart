@@ -18,7 +18,13 @@ import 'package:nofal_crm_app/features/messages_feature/screen/view/messages_scr
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
 import 'package:nofal_crm_app/features/notifaction/view/screen/noification_screen.dart';
 import 'package:nofal_crm_app/features/sales/company_task/view/screen/company_task_screen.dart';
+import 'package:nofal_crm_app/features/sales/company_task/logic/binding/show_task_binding.dart';
+import 'package:nofal_crm_app/features/sales/customer_comapny/logic/binding/add_customer_binding.dart';
+import 'package:nofal_crm_app/features/sales/customer_comapny/view/screen/add_customer.dart';
 import 'package:nofal_crm_app/features/sales/customer_comapny/view/screen/customer_comapny_screen.dart';
+import 'package:nofal_crm_app/features/sales/company_task/view/screen/show_task_screen.dart';
+import 'package:nofal_crm_app/features/sales/sales_home/data/binding/sales_home_binding.dart';
+import 'package:nofal_crm_app/features/sales/sales_home/view/screen/sales_view.dart';
 import 'package:nofal_crm_app/features/seo/screen/view/seo_screen.dart';
 import 'package:nofal_crm_app/features/tasks/logic/binding/task_binding.dart';
 import 'package:nofal_crm_app/features/tasks/view/screens/task_sreen.dart';
@@ -28,7 +34,7 @@ import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class AppPages {
-  static const initial = Routes.homeContent;
+  static const initial = Routes.salesHome;
 }
 
 appPages() => [
@@ -65,6 +71,15 @@ appPages() => [
           page: () => const CompanyTaskScreen(),
           transition: Transition.fadeIn),
       GetPage(
+          name: Routes.salesHome,
+          page: () => const SalesView(),
+          binding: SalesHomeBinding(),
+          transition: Transition.fadeIn),
+      // GetPage(
+      //     name: Routes.companyTaskScreen,
+      //     page: () => const CompanyTaskScreen(),
+      //     transition: Transition.fadeIn),
+      GetPage(
         name: Routes.messagesScreen,
         page: () => const MessagesScreen(),
       ),
@@ -95,6 +110,18 @@ appPages() => [
       GetPage(
         name: Routes.customerCompanyDetails,
         page: () => const CustomerCompanyScreen(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.showTaskScreen,
+        page: () => const ShowTaskScreen(),
+        binding: ShowTaskBinding(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.addCustomer,
+        page: () => const AddCustomer(),
+        binding: AddCustomerBinding(),
         transition: Transition.fadeIn,
       ),
       GetPage(

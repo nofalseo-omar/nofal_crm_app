@@ -39,7 +39,7 @@ class MessageBuilder extends StatelessWidget {
               children: [
                 Container(
                   constraints: BoxConstraints(
-                    maxWidth: Get.width * 0.4,
+                    maxWidth: Get.width * 0.6,
                   ),
                   padding: EdgeInsets.all(16.sp),
                   decoration: BoxDecoration(

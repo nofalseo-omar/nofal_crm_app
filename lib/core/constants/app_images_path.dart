@@ -11,6 +11,9 @@ class AppImages {
   static const String hide = 'assets/svg/eye-disable.svg';
   static const String edit = 'assets/svg/edit-rectangle.svg';
   static const String search = 'assets/svg/search.svg';
+  static const String camera = 'assets/svg/camera.svg';
+  static const String smile = 'assets/svg/smile.svg';
+  static const String mic = 'assets/svg/mic.svg';
 
   static const String delete = 'assets/svg/trash.svg';
 

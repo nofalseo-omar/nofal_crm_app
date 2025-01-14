@@ -10,12 +10,14 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
     super.key,
     this.icon,
     this.title,
+    this.subTitle,
     required this.tableItems,
     this.trillingWidget,
     this.showMore,
     this.showMoreWithDetails,
     this.textStyle,
     this.backgroundColor,
+    this.bottomWidget,
     this.flex = 3,
     this.nameOfKeyOfStyle,
     this.date,
@@ -23,7 +25,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
 
   final String? icon, title;
   final Map<String, String?> tableItems;
-  final Widget? trillingWidget;
+  final Widget? trillingWidget, bottomWidget;
   final Function()? showMore;
   final void Function(dynamic details)? showMoreWithDetails;
   final Color? backgroundColor;
@@ -31,6 +33,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
   final int flex;
   final String? nameOfKeyOfStyle;
   final String? date;
+  final String? subTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -65,12 +68,25 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                   8.horizontalSpace,
                   Expanded(
                     flex: 5,
-                    child: Text(
-                      title ?? '',
-                      overflow: TextOverflow.ellipsis,
-                      style: context.f16700?.copyWith(
-                        color: AppColors.blackColor,
-                      ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title ?? '',
+                          overflow: TextOverflow.ellipsis,
+                          style: context.f16700?.copyWith(
+                            color: AppColors.blackColor,
+                          ),
+                        ),
+                        if (subTitle != null)
+                          Text(
+                            subTitle ?? '',
+                            overflow: TextOverflow.ellipsis,
+                            style: context.f12500?.copyWith(
+                              color: Color(0xff545472),
+                            ),
+                          ),
+                      ],
                     ),
                   ),
                   const Spacer(
@@ -82,21 +98,21 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                         children: [
                           trillingWidget!,
                           10.horizontalSpace,
-                          if (showMore != null || showMoreWithDetails != null)
-                            GestureDetector(
-                              onTapDown: (details) =>
-                                  showMoreWithDetails?.call(details),
-                              child: const Card(
-                                elevation: 0,
-                                color: Color(0xffFAFEFF),
-                                child: Icon(
-                                  Icons.more_horiz,
-                                  color: Color(0xff91969A),
-                                  size: 30,
-                                ),
-                              ),
-                            ),
                         ],
+                      ),
+                    ),
+                  if (showMore != null || showMoreWithDetails != null)
+                    GestureDetector(
+                      onTapDown: (details) =>
+                          showMoreWithDetails?.call(details),
+                      child: const Card(
+                        elevation: 0,
+                        color: Color(0xffFAFEFF),
+                        child: Icon(
+                          Icons.more_horiz,
+                          color: Color(0xff91969A),
+                          size: 30,
+                        ),
                       ),
                     ),
                 ],
@@ -116,8 +132,8 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                   flex: 5,
                   child: Wrap(
                     alignment: WrapAlignment.start,
-                    spacing: isSmallScreen ? 8 : 16,
-                    runSpacing: isSmallScreen ? 10 : 12,
+                    spacing: 20,
+                    runSpacing: 10,
                     children: tableItems.entries.map((entry) {
                       return TableCellItem(
                         title: entry.key,
@@ -155,6 +171,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                   color: AppColors.blackColor.withOpacity(0.5),
                 ),
               ),
+            if (bottomWidget != null) bottomWidget!,
             if (date != null)
               const Spacer(
                 flex: 1,
