@@ -7,6 +7,9 @@ class Routes {
   static const String messagesScreen = '/messageScreen';
   static const String messagesList = '/messagesList';
   static const String salesAdminHome = '/salesAdminHome';
+  static const String salesAdminCompanyView = '/salesAdminCompanyView';
+  static const String salesAdminCustomerView = '/salesAdminCustomerView';
+  static const String salesAdminSalesTeamView = '/salesAdminSalesTeamView';
   static const String socialMediaStatus = '/socialMediaStatus';
   static const String socialMediaStatusDetails = '/socialMediaStatusDetails';
   static const String projectStatusScreen = '/ProjectStatusScreen';

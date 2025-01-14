@@ -26,8 +26,11 @@ import 'package:nofal_crm_app/features/sales/customer_comapny/view/screen/custom
 import 'package:nofal_crm_app/features/sales/company_task/view/screen/show_task_screen.dart';
 import 'package:nofal_crm_app/features/sales/sales_home/data/binding/sales_home_binding.dart';
 import 'package:nofal_crm_app/features/sales/sales_home/view/screen/sales_view.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_company/view/screen/sales_admin_company_view.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_customer/view/screen/sales_admin_customer_view.dart';
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_home/logic/binding/sales_admin_binding.dart';
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_home/view/screen/sales_admin_view.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_sales_team/view/screen/sales_admin_sales_team_view.dart';
 import 'package:nofal_crm_app/features/seo/screen/view/seo_screen.dart';
 import 'package:nofal_crm_app/features/tasks/logic/binding/task_binding.dart';
 import 'package:nofal_crm_app/features/tasks/view/screens/task_sreen.dart';
@@ -94,6 +97,21 @@ appPages() => [
         name: Routes.salesAdminHome,
         page: () => const SalesAdminView(),
         binding: SalesAdminBinding(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.salesAdminCompanyView,
+        page: () => const SalesAdminCompanyView(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.salesAdminCustomerView,
+        page: () => const SalesAdminCustomerView(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.salesAdminSalesTeamView,
+        page: () => const SalesAdminSalesTeamView(),
         transition: Transition.fadeIn,
       ),
       GetPage(

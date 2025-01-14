@@ -65,7 +65,7 @@ class SalesAdminView extends GetView<SalesAdminController> {
                   Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.companyTaskScreen);
+                      Get.toNamed(Routes.salesAdminCompanyView);
                     },
                     child: Text(
                       'عرض المزيد',
@@ -157,7 +157,7 @@ class SalesAdminView extends GetView<SalesAdminController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.customerCompanyDetails);
+                      Get.toNamed(Routes.salesAdminCustomerView);
                     },
                     child: Text(
                       'عرض المزيد',
