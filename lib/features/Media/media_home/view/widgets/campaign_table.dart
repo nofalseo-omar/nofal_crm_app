@@ -2,7 +2,7 @@ import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/Media/media_home/view/widgets/dialogs/add_daily_performance.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget.dart';
-import 'package:nofal_crm_app/features/seo/screen/widget/showmenu.dart';
+import 'package:nofal_crm_app/features/seo/home_seo/view/widget/showmenu.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

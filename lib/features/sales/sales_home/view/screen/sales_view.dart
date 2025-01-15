@@ -109,19 +109,7 @@ class SalesView extends GetView<SalesHomeController> {
                             "اسم الشركة": "نوفل سيو",
                             "سوشيال ميديا": "فيس بوك",
                           },
-                          // date: "تاريخ الإنشاء: ١ مايو ٢٠٢٣",
-                          // trillingWidget: Row(
-                          //   children: const [
-                          //     TableUsersCirclesItem(
-                          //         title: 'تمت المشاركة مع',
-                          //         users: [
-                          //           'https://i.pravatar.cc/300?img=1',
-                          //           'https://i.pravatar.cc/300?img=2',
-                          //           'https://i.pravatar.cc/300?img=3',
-                          //           'https://i.pravatar.cc/300?img=4'
-                          //         ]),
-                          //   ],
-                          // ),
+
                           showMore: () {},
                           bottomWidget: Padding(
                             padding: EdgeInsets.symmetric(vertical: 15.sp),

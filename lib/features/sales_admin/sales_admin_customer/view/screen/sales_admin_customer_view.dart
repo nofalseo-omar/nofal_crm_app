@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_border_container.dart';
+import 'package:nofal_crm_app/components/custom_button.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
+import 'package:nofal_crm_app/routes/app_routes.dart';
 
 class SalesAdminCustomerView extends StatelessWidget {
   const SalesAdminCustomerView({super.key});
@@ -17,7 +20,7 @@ class SalesAdminCustomerView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: List.generate(
-              5,
+              10,
               (index) => DefaultRowWidgetWithTopImage(
                 icon: AppImages.users,
                 title: "محمد عجمي",
@@ -32,6 +35,12 @@ class SalesAdminCustomerView extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.toNamed(Routes.salesAdminAddCustomerView);
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }

@@ -56,80 +56,91 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Row(
-                children: [
-                  if (icon != null)
-                    CustomImageHandler(
-                      icon,
-                      width: 35,
-                      fit: BoxFit.cover,
-                      height: 35,
-                    ),
-                  8.horizontalSpace,
-                  Expanded(
-                    flex: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+            (showMore == null || showMoreWithDetails == null) &&
+                    trillingWidget == null &&
+                    icon == null &&
+                    title == null &&
+                    subTitle == null
+                ? SizedBox()
+                : Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Row(
                       children: [
-                        Text(
-                          title ?? '',
-                          overflow: TextOverflow.ellipsis,
-                          style: context.f16700?.copyWith(
-                            color: AppColors.blackColor,
+                        if (icon != null)
+                          CustomImageHandler(
+                            icon,
+                            width: 35,
+                            fit: BoxFit.cover,
+                            height: 35,
                           ),
-                        ),
-                        if (subTitle != null)
-                          Text(
-                            subTitle ?? '',
-                            overflow: TextOverflow.ellipsis,
-                            style: context.f12500?.copyWith(
-                              color: Color(0xff545472),
+                        8.horizontalSpace,
+                        if (icon != null || title != null || subTitle != null)
+                          Expanded(
+                            flex: 5,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  title ?? '',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: context.f16700?.copyWith(
+                                    color: AppColors.blackColor,
+                                  ),
+                                ),
+                                if (subTitle != null)
+                                  Text(
+                                    subTitle ?? '',
+                                    overflow: TextOverflow.ellipsis,
+                                    style: context.f12500?.copyWith(
+                                      color: Color(0xff545472),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                        if (icon != null || title != null || subTitle != null)
+                          const Spacer(
+                            flex: 1,
+                          ),
+                        if (trillingWidget != null)
+                          FittedBox(
+                            child: Row(
+                              children: [
+                                trillingWidget!,
+                                10.horizontalSpace,
+                              ],
+                            ),
+                          ),
+                        if (showMore != null || showMoreWithDetails != null)
+                          GestureDetector(
+                            onTapDown: (details) =>
+                                showMoreWithDetails?.call(details),
+                            onTap: showMore,
+                            child: const Card(
+                              elevation: 0,
+                              color: Color(0xffFAFEFF),
+                              child: Icon(
+                                Icons.more_horiz,
+                                color: Color(0xff91969A),
+                                size: 30,
+                              ),
                             ),
                           ),
                       ],
                     ),
                   ),
-                  const Spacer(
-                    flex: 1,
+            (showMore == null || showMoreWithDetails == null) &&
+                    trillingWidget == null &&
+                    icon == null &&
+                    title == null &&
+                    subTitle == null
+                ? SizedBox()
+                : Divider(
+                    color: Color(0xffEBEBEB),
                   ),
-                  if (trillingWidget != null)
-                    FittedBox(
-                      child: Row(
-                        children: [
-                          trillingWidget!,
-                          10.horizontalSpace,
-                        ],
-                      ),
-                    ),
-                  if (showMore != null || showMoreWithDetails != null)
-                    GestureDetector(
-                      onTapDown: (details) =>
-                          showMoreWithDetails?.call(details),
-                      child: const Card(
-                        elevation: 0,
-                        color: Color(0xffFAFEFF),
-                        child: Icon(
-                          Icons.more_horiz,
-                          color: Color(0xff91969A),
-                          size: 30,
-                        ),
-                      ),
-                    ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Color(0xffEBEBEB),
-            ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Leading section
-                // if (title != null)
-
-                // Table Items - dynamically sized
                 Expanded(
                   flex: 5,
                   child: Wrap(

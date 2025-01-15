@@ -3,9 +3,9 @@
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget.dart';
-import 'package:nofal_crm_app/features/seo/screen/widget/create_note_dialog.dart';
-import 'package:nofal_crm_app/features/seo/screen/widget/create_report_dialog.dart';
-import 'package:nofal_crm_app/features/seo/screen/widget/showmenu.dart';
+import 'package:nofal_crm_app/features/seo/home_seo/view/widget/create_note_dialog.dart';
+import 'package:nofal_crm_app/features/seo/home_seo/view/widget/create_report_dialog.dart';
+import 'package:nofal_crm_app/features/seo/home_seo/view/widget/showmenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

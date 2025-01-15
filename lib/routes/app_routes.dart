@@ -9,7 +9,10 @@ class Routes {
   static const String salesAdminHome = '/salesAdminHome';
   static const String salesAdminCompanyView = '/salesAdminCompanyView';
   static const String salesAdminCustomerView = '/salesAdminCustomerView';
+  static const String salesAdminAddCustomerView = '/salesAdminAddCustomerView';
   static const String salesAdminSalesTeamView = '/salesAdminSalesTeamView';
+  static const String salesAdminSalesTeamDetailsView =
+      '/salesAdminSalesTeamDetailsView';
   static const String socialMediaStatus = '/socialMediaStatus';
   static const String socialMediaStatusDetails = '/socialMediaStatusDetails';
   static const String projectStatusScreen = '/ProjectStatusScreen';
@@ -22,9 +25,15 @@ class Routes {
   static const String showTaskScreen = '/showTaskScreen';
   static const String addCustomer = '/addCustomer';
   static const String mediaHomeScreen = '/mediaHomeScreen';
+  static const String mediaCurrentCampaign = '/mediaCurrentCampaign';
+  static const String mediaCampaignDetails = '/mediaCampaignDetails';
+  static const String mediaAddCampaign = '/mediaAddCampaign';
+  static const String mediaCampaignDailyTask = '/mediaCampaignDailyTask';
   static const String seoScreen = '/seoScreen';
   static const String immediateTasksScreen = '/immediateTasksScreen';
   static const String addContentTask = '/addContentTask';
   static const String addDesingerTask = '/addDesingerTask';
+  static const String creatReportScreeen = '/CreatReportScreeen';
+
   // static const String customerCompanyDetails = '/customerCompanyDetailsScreen';
 }

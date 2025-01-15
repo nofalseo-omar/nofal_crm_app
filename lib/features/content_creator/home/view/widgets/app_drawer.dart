@@ -96,7 +96,7 @@ class AppDrawer extends StatelessWidget {
                     bckGround: AppColors.darkPrimaryColor.withOpacity(0.1),
                     txtColor: AppColors.darkPrimaryColor,
                     onTap: () {
-                      Get.offAllNamed(Routes.salesAdminSalesTeamView);
+                      Get.toNamed(Routes.salesAdminSalesTeamView);
                     },
                   ),
                   _buildListItem('مهام فورية', AppImages.sent, count: 2,

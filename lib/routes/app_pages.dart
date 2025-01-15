@@ -1,3 +1,7 @@
+import 'package:nofal_crm_app/features/Media/media_current_campaign/view/screen/media_add_campaign.dart';
+import 'package:nofal_crm_app/features/Media/media_current_campaign/view/screen/media_campaign_daily_task.dart';
+import 'package:nofal_crm_app/features/Media/media_current_campaign/view/screen/media_campaign_details.dart';
+import 'package:nofal_crm_app/features/Media/media_current_campaign/view/screen/media_current_campaign.dart';
 import 'package:nofal_crm_app/features/content_creator/task/logic/controller/content_task_controller.dart';
 import 'package:nofal_crm_app/features/content_creator/task/view/screens/add_content_creator_dailog.dart';
 import 'package:nofal_crm_app/features/Media/media_home/view/screen/media_home_screen.dart';
@@ -27,11 +31,14 @@ import 'package:nofal_crm_app/features/sales/company_task/view/screen/show_task_
 import 'package:nofal_crm_app/features/sales/sales_home/data/binding/sales_home_binding.dart';
 import 'package:nofal_crm_app/features/sales/sales_home/view/screen/sales_view.dart';
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_company/view/screen/sales_admin_company_view.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_customer/view/screen/sales_admin_add_customer_view.dart';
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_customer/view/screen/sales_admin_customer_view.dart';
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_home/logic/binding/sales_admin_binding.dart';
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_home/view/screen/sales_admin_view.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_sales_team/view/screen/sales_admin_sales_team_details_view.dart';
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_sales_team/view/screen/sales_admin_sales_team_view.dart';
-import 'package:nofal_crm_app/features/seo/screen/view/seo_screen.dart';
+import 'package:nofal_crm_app/features/seo/creat_report/view/screen/creat_report_screen.dart';
+import 'package:nofal_crm_app/features/seo/home_seo/view/screen/seo_screen.dart';
 import 'package:nofal_crm_app/features/tasks/logic/binding/task_binding.dart';
 import 'package:nofal_crm_app/features/tasks/view/screens/task_sreen.dart';
 import 'package:nofal_crm_app/features/welcome/logic/binding/login_binding.dart';
@@ -110,8 +117,18 @@ appPages() => [
         transition: Transition.fadeIn,
       ),
       GetPage(
+        name: Routes.salesAdminAddCustomerView,
+        page: () => const SalesAdminAddCustomerView(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
         name: Routes.salesAdminSalesTeamView,
         page: () => const SalesAdminSalesTeamView(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.salesAdminSalesTeamDetailsView,
+        page: () => const SalesAdminSalesTeamDetailsView(),
         transition: Transition.fadeIn,
       ),
       GetPage(
@@ -179,6 +196,26 @@ appPages() => [
         transition: Transition.fadeIn,
       ),
       GetPage(
+        name: Routes.mediaCurrentCampaign,
+        page: () => const MediaCurrentCampaign(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.mediaAddCampaign,
+        page: () => const MediaAddCampaign(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.mediaCampaignDailyTask,
+        page: () => const MediaCampaignDailyTask(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.mediaCampaignDetails,
+        page: () => const MediaCampaignDetails(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
         name: Routes.managerSeoScreen,
         page: () => const ManagerSeoScreen(),
         transition: Transition.fadeIn,
@@ -191,6 +228,11 @@ appPages() => [
       GetPage(
         name: Routes.immediateTasksScreen,
         page: () => const ImmediateTasksScreen(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.creatReportScreeen,
+        page: () => const CreatReportScreen(),
         transition: Transition.fadeIn,
       ),
     ];
