@@ -11,6 +11,7 @@ class CustomButton extends StatelessWidget {
   final Color? color;
   final Color? bordereColor;
   final double? fontSize;
+  final double? height;
   final bool isDisabled;
   final IconData? icon;
 
@@ -18,6 +19,7 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onTap,
+    this.height = 50,
     this.borderRadius = 10,
     this.backgroundColor = AppColors.primaryColor,
     this.color = AppColors.whiteColor,
@@ -34,7 +36,7 @@ class CustomButton extends StatelessWidget {
         isDisabled ? null : onTap();
       },
       child: Container(
-        height: 50.h,
+        height: height!.h,
         padding: const EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(
           // color: backgroundColor!,

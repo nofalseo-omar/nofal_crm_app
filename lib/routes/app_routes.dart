@@ -34,6 +34,8 @@ class Routes {
   static const String addContentTask = '/addContentTask';
   static const String addDesingerTask = '/addDesingerTask';
   static const String creatReportScreeen = '/CreatReportScreeen';
+    static const String newAdminScreen = '/newAdminScreen';
+  static const String personalProfileScreen = '/personalProfileScreen';
 
   // static const String customerCompanyDetails = '/customerCompanyDetailsScreen';
 }

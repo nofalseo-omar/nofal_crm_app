@@ -39,6 +39,8 @@ import 'package:nofal_crm_app/features/sales_admin/sales_admin_sales_team/view/s
 import 'package:nofal_crm_app/features/sales_admin/sales_admin_sales_team/view/screen/sales_admin_sales_team_view.dart';
 import 'package:nofal_crm_app/features/seo/creat_report/view/screen/creat_report_screen.dart';
 import 'package:nofal_crm_app/features/seo/home_seo/view/screen/seo_screen.dart';
+import 'package:nofal_crm_app/features/seo/personal_profile/view/screen/personal_profile_screen.dart';
+import 'package:nofal_crm_app/features/seo/seo_admin/view/screen/seo_admin_screen.dart';
 import 'package:nofal_crm_app/features/tasks/logic/binding/task_binding.dart';
 import 'package:nofal_crm_app/features/tasks/view/screens/task_sreen.dart';
 import 'package:nofal_crm_app/features/welcome/logic/binding/login_binding.dart';
@@ -233,6 +235,16 @@ appPages() => [
       GetPage(
         name: Routes.creatReportScreeen,
         page: () => const CreatReportScreen(),
+        transition: Transition.fadeIn,
+      ),
+      GetPage(
+        name: Routes.newAdminScreen,
+        page: () => const NewAdminScreen(),
+        transition: Transition.fadeIn,
+      ),
+       GetPage(
+        name: Routes.personalProfileScreen,
+        page: () => const PersonalProfileScreen(),
         transition: Transition.fadeIn,
       ),
     ];
