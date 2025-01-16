@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
-import 'package:nofal_crm_app/components/developer_drawer_widget.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/app_drawer.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/default_row_widget_with_top_image.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/status_widget.dart';
-import 'package:nofal_crm_app/features/sales/sales_home/data/controller/sales_home_controller.dart';
+import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/time_container.dart';
+import 'package:nofal_crm_app/features/sales_admin/sales_admin_home/logic/controller/sales_admin_controller.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 
-class SalesView extends GetView<SalesHomeController> {
-  const SalesView({super.key});
+class SalesAdminView extends GetView<SalesAdminController> {
+  const SalesAdminView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class SalesView extends GetView<SalesHomeController> {
                   Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.companyTaskScreen);
+                      Get.toNamed(Routes.salesAdminCompanyView);
                     },
                     child: Text(
                       'عرض المزيد',
@@ -106,7 +106,7 @@ class SalesView extends GetView<SalesHomeController> {
                           tableItems: const {
                             "البلد": "مصر ",
                             "اسم الشركة": "نوفل سيو",
-                            "سوشيال ميديا": "فيس بوك",
+                            "سوشيال ميديا": "فيس بوك"
                           },
 
                           showMore: () {},
@@ -157,7 +157,7 @@ class SalesView extends GetView<SalesHomeController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.customerCompanyDetails);
+                      Get.toNamed(Routes.salesAdminCustomerView);
                     },
                     child: Text(
                       'عرض المزيد',
@@ -184,7 +184,7 @@ class SalesView extends GetView<SalesHomeController> {
                           'اسم الشركة': 'نوفل سيو',
                           "البلد": "مصر ",
                           "سوشيال ميدا": "فيس بوك",
-                          "درجة الاهتمام": "%100",
+                          "درجة الاهتمام": "%100*",
 
                           // "عدد البوستات": "١٣ بوست",
                         },

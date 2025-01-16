@@ -21,6 +21,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
     this.flex = 3,
     this.nameOfKeyOfStyle,
     this.date,
+    this.subTitleColor,
   });
 
   final String? icon, title;
@@ -31,6 +32,7 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
   final Color? backgroundColor;
   final TextStyle? textStyle;
   final int flex;
+  final List<Color>? subTitleColor;
   final String? nameOfKeyOfStyle;
   final String? date;
   final String? subTitle;
@@ -54,80 +56,91 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Row(
-                children: [
-                  if (icon != null)
-                    CustomImageHandler(
-                      icon,
-                      width: 35,
-                      fit: BoxFit.cover,
-                      height: 35,
-                    ),
-                  8.horizontalSpace,
-                  Expanded(
-                    flex: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+            (showMore == null || showMoreWithDetails == null) &&
+                    trillingWidget == null &&
+                    icon == null &&
+                    title == null &&
+                    subTitle == null
+                ? SizedBox()
+                : Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Row(
                       children: [
-                        Text(
-                          title ?? '',
-                          overflow: TextOverflow.ellipsis,
-                          style: context.f16700?.copyWith(
-                            color: AppColors.blackColor,
+                        if (icon != null)
+                          CustomImageHandler(
+                            icon,
+                            width: 35,
+                            fit: BoxFit.cover,
+                            height: 35,
                           ),
-                        ),
-                        if (subTitle != null)
-                          Text(
-                            subTitle ?? '',
-                            overflow: TextOverflow.ellipsis,
-                            style: context.f12500?.copyWith(
-                              color: const Color(0xff545472),
+                        8.horizontalSpace,
+                        if (icon != null || title != null || subTitle != null)
+                          Expanded(
+                            flex: 5,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  title ?? '',
+                                  overflow: TextOverflow.ellipsis,
+                                  style: context.f16700?.copyWith(
+                                    color: AppColors.blackColor,
+                                  ),
+                                ),
+                                if (subTitle != null)
+                                  Text(
+                                    subTitle ?? '',
+                                    overflow: TextOverflow.ellipsis,
+                                    style: context.f12500?.copyWith(
+                                      color: Color(0xff545472),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                        if (icon != null || title != null || subTitle != null)
+                          const Spacer(
+                            flex: 1,
+                          ),
+                        if (trillingWidget != null)
+                          FittedBox(
+                            child: Row(
+                              children: [
+                                trillingWidget!,
+                                10.horizontalSpace,
+                              ],
+                            ),
+                          ),
+                        if (showMore != null || showMoreWithDetails != null)
+                          GestureDetector(
+                            onTapDown: (details) =>
+                                showMoreWithDetails?.call(details),
+                            onTap: showMore,
+                            child: const Card(
+                              elevation: 0,
+                              color: Color(0xffFAFEFF),
+                              child: Icon(
+                                Icons.more_horiz,
+                                color: Color(0xff91969A),
+                                size: 30,
+                              ),
                             ),
                           ),
                       ],
                     ),
                   ),
-                  const Spacer(
-                    flex: 1,
+            (showMore == null || showMoreWithDetails == null) &&
+                    trillingWidget == null &&
+                    icon == null &&
+                    title == null &&
+                    subTitle == null
+                ? SizedBox()
+                : Divider(
+                    color: Color(0xffEBEBEB),
                   ),
-                  if (trillingWidget != null)
-                    FittedBox(
-                      child: Row(
-                        children: [
-                          trillingWidget!,
-                          10.horizontalSpace,
-                        ],
-                      ),
-                    ),
-                  if (showMore != null || showMoreWithDetails != null)
-                    GestureDetector(
-                      onTapDown: (details) =>
-                          showMoreWithDetails?.call(details),
-                      child: const Card(
-                        elevation: 0,
-                        color: Color(0xffFAFEFF),
-                        child: Icon(
-                          Icons.more_horiz,
-                          color: Color(0xff91969A),
-                          size: 30,
-                        ),
-                      ),
-                    ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Color(0xffEBEBEB),
-            ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Leading section
-                // if (title != null)
-
-                // Table Items - dynamically sized
                 Expanded(
                   flex: 5,
                   child: Wrap(
@@ -137,7 +150,16 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
                     children: tableItems.entries.map((entry) {
                       return TableCellItem(
                         title: entry.key,
-                        subTitle: entry.value == "*" ? null : entry.value,
+                        subTitle: entry.value == "*"
+                            ? null
+                            : entry.value![entry.value!.length - 1] == "*"
+                                ? entry.value!
+                                    .substring(0, entry.value!.length - 1)
+                                : entry.value,
+                        subTitleStyle: TextStyle(
+                            color: entry.value![entry.value!.length - 1] == "*"
+                                ? AppColors.greenColor
+                                : AppColors.blackColor),
                         titleStyle: nameOfKeyOfStyle == null
                             ? textStyle
                             : entry.value == '*'
@@ -180,5 +202,15 @@ class DefaultRowWidgetWithTopImage extends StatelessWidget {
         ),
       );
     });
+  }
+}
+
+extension FicListExtension<T> on List<T> {
+  /// Maps each element of the list.
+  /// The [map] function gets both the original [item] and its [index].
+  Iterable<E> mapIndexed<E>(E Function(int index, T item) map) sync* {
+    for (var index = 0; index < length; index++) {
+      yield map(index, this[index]);
+    }
   }
 }

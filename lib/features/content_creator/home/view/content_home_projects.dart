@@ -74,43 +74,55 @@ class ContentHomeScreen extends GetView<ContentHomeController> {
               12.verticalSpace,
 
               // default
-              SizedBox(
-                height: 200.h,
-                child: ListView.builder(
-                  shrinkWrap: true,
+              // SizedBox(
+              //   height: 200.h,
+              //   child: ListView.builder(
+              //     shrinkWrap: true,
+              //     scrollDirection: Axis.horizontal,
+              //     itemBuilder: (context, index) =>
+              //     itemCount: 5,
+              //   ),
+              // ),
+              Expanded(
+                child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => SizedBox(
-                    width: Get.width * 0.9,
-                    child: GestureDetector(
-                      onTap: () {
-                        Get.toNamed(Routes.socialMediaStatus);
-                      },
-                      child: DefaultRowWidgetWithTopImage(
-                        icon: AppImages.users,
-                        title: 'العملات الرقمية',
-                        tableItems: const {
-                          "عدد الصور": "٢٧ صورة",
-                          "عدد المقالات": "٢١ مقال",
-                          "عدد البوستات": "٢٧ بوست"
-                        },
-                        date: "تاريخ الإنشاء: ١ مايو ٢٠٢٣",
-                        trillingWidget: Row(
-                          children: const [
-                            TableUsersCirclesItem(
-                                title: 'تمت المشاركة مع',
-                                users: [
-                                  'https://i.pravatar.cc/300?img=1',
-                                  'https://i.pravatar.cc/300?img=2',
-                                  'https://i.pravatar.cc/300?img=3',
-                                  'https://i.pravatar.cc/300?img=4'
-                                ]),
-                          ],
+                  child: Row(
+                    children: List.generate(
+                      5,
+                      (index) => SizedBox(
+                        width: Get.width * 0.9,
+                        child: GestureDetector(
+                          onTap: () {
+                            Get.toNamed(Routes.socialMediaStatus);
+                          },
+                          child: DefaultRowWidgetWithTopImage(
+                            icon: AppImages.users,
+                            title: 'العملات الرقمية',
+                            tableItems: const {
+                              "عدد الصور": "٢٧ صورة",
+                              "عدد المقالات": "٢١ مقال",
+                              "عدد البوستات": "٢٧ بوست",
+                              "عدد الdsبوستات": "٢٧ بوست",
+                            },
+                            date: "تاريخ الإنشاء: ١ مايو ٢٠٢٣",
+                            trillingWidget: Row(
+                              children: const [
+                                TableUsersCirclesItem(
+                                    title: 'تمت المشاركة مع',
+                                    users: [
+                                      'https://i.pravatar.cc/300?img=1',
+                                      'https://i.pravatar.cc/300?img=2',
+                                      'https://i.pravatar.cc/300?img=3',
+                                      'https://i.pravatar.cc/300?img=4'
+                                    ]),
+                              ],
+                            ),
+                            showMore: () {},
+                          ),
                         ),
-                        showMore: () {},
                       ),
                     ),
                   ),
-                  itemCount: 5,
                 ),
               ),
               20.verticalSpace,

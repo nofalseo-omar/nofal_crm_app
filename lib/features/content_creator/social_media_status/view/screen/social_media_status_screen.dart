@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
@@ -14,7 +15,8 @@ class SocialMediaStatusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      drawer: const AppDrawer( ),
+      drawer: AppDrawer(),
+
       body: const SocialMediaTable(),
       floatingActionButton: const Row(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -77,13 +79,19 @@ class SocialMediaStatusScreen extends StatelessWidget {
   }
 }
 
-AppBar buildAppBar(BuildContext context, title) {
+AppBar buildAppBar(BuildContext context, title,
+    {bool hasBackButton = true, bool haveIcon = false, String? image}) {
   return AppBar(
     backgroundColor: AppColors.whiteColor,
     centerTitle: true,
-    title: Text(
-      title,
-      style: context.f20600,
+    title: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          title,
+          style: context.f20600,
+        ),
+      ],
     ),
     automaticallyImplyLeading: false,
     leading: IconButton(
@@ -93,13 +101,21 @@ AppBar buildAppBar(BuildContext context, title) {
       ),
       onPressed: () {},
     ),
-    actions: [
-      IconButton(
-          onPressed: () {
-            Get.back();
-          },
-          icon: const RotatedBox(
-              quarterTurns: 2, child: CustomImageHandler(AppImages.arrowBack)))
-    ],
+    actions: hasBackButton
+        ? [
+            IconButton(
+              onPressed: () {
+                Get.back();
+              },
+              icon: const RotatedBox(
+                quarterTurns: 2,
+                child: CustomImageHandler(AppImages.arrowBack),
+              ),
+            )
+          ]
+        : [
+            CustomImageHandler(AppImages.search),
+            10.horizontalSpace,
+          ],
   );
 }
