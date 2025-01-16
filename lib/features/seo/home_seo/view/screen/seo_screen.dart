@@ -41,64 +41,59 @@ class SeoScreen extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 32),
+            Text(
+              'الإحصائيات',
+              style: context.f20500,
+            ),
+            16.verticalSpace,
+            StatusWidget(),
+            20.verticalSpace,
+            Row(
               children: [
-                SizedBox(height: 32),
                 Text(
-                  'الإحصائيات',
+                  'الحملات',
                   style: context.f20500,
                 ),
-                16.verticalSpace,
-                StatusWidget(),
-                20.verticalSpace,
-                Row(
-                  children: [
-                    Text(
-                      'الحملات',
-                      style: context.f20500,
-                    ),
-                    const Spacer(),
-                    Text(
-                      'عرض المزيد',
-                      style: context.f15600!.copyWith(
-                        color: AppColors.darkPrimaryColor,
-                      ),
-                    )
-                  ],
-                ),
+                const Spacer(),
+                Text(
+                  'عرض المزيد',
+                  style: context.f15600!.copyWith(
+                    color: AppColors.darkPrimaryColor,
+                  ),
+                )
               ],
             ),
-          ),
-          12.verticalSpace,
-          SizedBox(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: List.generate(
-                  5,
-                  (index) => SizedBox(
-                    width: Get.width * 0.8,
-                    child: DefaultRowWidgetWithTopImage(
-                      title: "حملة مشاهدات",
-                      tableItems: const {
-                        " وقت التقرير": 'نوفل سيو',
-                        " حالة العمل اليوم": "بوست تعليم ",
-                        " التقرير النهائي": "فيس بوك",
-                      },
-                      showMore: () {},
+            12.verticalSpace,
+            SizedBox(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(
+                    5,
+                    (index) => SizedBox(
+                      width: Get.width * 0.8,
+                      child: DefaultRowWidgetWithTopImage(
+                        title: "حملة مشاهدات",
+                        tableItems: const {
+                          " وقت التقرير": 'نوفل سيو',
+                          " حالة العمل اليوم": "بوست تعليم ",
+                          " التقرير النهائي": "فيس بوك",
+                        },
+                        showMore: () {},
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
