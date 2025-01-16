@@ -1,7 +1,5 @@
 import 'package:nofal_crm_app/components/textFields/custom_text_field.dart';
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/add_immediate_task_dialog.dart';
 import 'package:nofal_crm_app/features/messages_feature/screen/widgets/message_list_item_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -36,10 +34,12 @@ class MessagesList extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: TextFieldComponent(
                 hintText: 'ابحث',
-                fillColor: Color(0xffE6E6EA).withOpacity(0.20),
-                borderColor: Color(0xffE6E6EA).withOpacity(0.20),
+                fillColor: const Color(0xffE6E6EA).withOpacity(0.20),
+                borderColor: const Color(0xffE6E6EA).withOpacity(0.20),
                 // radius: 4.r,
-                validator: (String) {},
+                validator: (String) {
+                  return null;
+                },
               ),
             ),
             SizedBox(height: 20.h),
@@ -52,7 +52,7 @@ class MessagesList extends StatelessWidget {
                       'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                   name: "أسامة حسن",
                   backgroundColor:
-                      index % 2 == 0 ? Color(0xffEDF3F8) : AppColors.whiteColor,
+                      index % 2 == 0 ? const Color(0xffEDF3F8) : AppColors.whiteColor,
                   last_message: "شوف السيرفر تاني",
                   time: DateTime.now(),
                 ),

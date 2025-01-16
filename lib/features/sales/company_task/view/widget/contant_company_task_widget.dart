@@ -1,13 +1,6 @@
 import 'package:nofal_crm_app/components/custom_border_container.dart';
-import 'package:nofal_crm_app/components/custom_button.dart';
-import 'package:nofal_crm_app/components/dailog/custom_dialog_with_two_buttom.dart';
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
-import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/sales/company_task/view/widget/iteam_task_company.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:blur/blur.dart';
 
 class ContactTaskCompany extends StatelessWidget {
   const ContactTaskCompany({

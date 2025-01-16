@@ -1,6 +1,4 @@
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/features/content_creator/home/widgets/status_widget/connection_duration_widget.dart';
-import 'package:nofal_crm_app/main.dart';
 import 'package:nofal_crm_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/components/custom_border_container.dart';

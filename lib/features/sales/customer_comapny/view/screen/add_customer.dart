@@ -7,7 +7,6 @@ import 'package:nofal_crm_app/components/custom_button.dart';
 import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/core/utils/app_colors.dart';
 import 'package:nofal_crm_app/features/content_creator/social_media_status/view/screen/social_media_status_screen.dart';
-import 'package:nofal_crm_app/features/sales/company_task/logic/controller/show_task_controller.dart';
 import 'package:nofal_crm_app/features/sales/customer_comapny/logic/controller/add_customer_controller.dart';
 import 'package:nofal_crm_app/features/sales/customer_comapny/view/widget/text_field_builder.dart';
 

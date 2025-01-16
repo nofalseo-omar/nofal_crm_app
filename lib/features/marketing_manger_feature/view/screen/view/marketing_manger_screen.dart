@@ -60,10 +60,13 @@ class MarketingMangerScreen extends GetView<MarketingManagerHomeController> {
                     style: context.f20500,
                   ),
                   const Spacer(),
-                  Text(
-                    'عرض المزيد',
-                    style: context.f15600!.copyWith(
-                      color: AppColors.darkPrimaryColor,
+                  GestureDetector(
+                    onTap: () => Get.toNamed(Routes.projects),
+                    child: Text(
+                      'عرض المزيد',
+                      style: context.f15600!.copyWith(
+                        color: AppColors.darkPrimaryColor,
+                      ),
                     ),
                   )
                 ],
@@ -118,7 +121,7 @@ class MarketingMangerScreen extends GetView<MarketingManagerHomeController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed(Routes.customerCompanyDetails);
+                      // Get.toNamed(Routes.customerCompanyDetails);
                     },
                     child: Text(
                       'عرض المزيد',

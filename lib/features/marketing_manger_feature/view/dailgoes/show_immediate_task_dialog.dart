@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nofal_crm_app/components/custom_image_handler.dart';
 import 'package:nofal_crm_app/components/image_gallery_widget.dart';
@@ -11,7 +10,6 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:nofal_crm_app/core/utils/app_validation_functions.dart';
 import 'package:nofal_crm_app/features/content_creator/home/view/widgets/table_widget/table_cell_item.dart';
-import 'package:nofal_crm_app/features/marketing_manger_feature/view/dailgoes/sub_compontets/pick_user.dart';
 import '../../../../components/textFields/custom_text_field.dart';
 
 class ShowImmediateTaskDailog extends StatefulWidget {

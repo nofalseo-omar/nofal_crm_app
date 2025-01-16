@@ -37,5 +37,6 @@ class Routes {
     static const String newAdminScreen = '/newAdminScreen';
   static const String personalProfileScreen = '/personalProfileScreen';
 
+  static const String projects = '/projects';
   // static const String customerCompanyDetails = '/customerCompanyDetailsScreen';
 }

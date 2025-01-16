@@ -1,5 +1,4 @@
 import 'package:nofal_crm_app/core/constants/app_images_path.dart';
-import 'package:nofal_crm_app/core/theme/text_themes.dart';
 import 'package:nofal_crm_app/features/notifaction/view/widget/notifiaction_row_widget.dart';
 import 'package:flutter/material.dart';
 
